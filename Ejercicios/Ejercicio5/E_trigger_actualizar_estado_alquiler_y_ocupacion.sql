@@ -4,7 +4,7 @@ y el periodo de ocupación con una sola operación.
 */
 
 CREATE TRIGGER TG_actualizar_periodo_ocupacion
-BEFORE UPDATE ON periodoOcupacion
+BEFORE UPDATE ON contratoAlquiler
 FOR EACH ROW 
 EXECUTE PROCEDURE SP_actualizar_periodo_ocupacion();
 

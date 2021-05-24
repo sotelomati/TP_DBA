@@ -249,9 +249,15 @@ id_cliente integer not null,
 mesAño date not null,
 importeCuota double precision not null,
 fechaPago date not null,
-
+-----------Agregado //JuanK//  24/05-------------------
+tipo_operacion_contable INTEGER,
+-----------Agregado //JuanK//  24/05--fin--------------
 PRIMARY KEY (id_inmueble, id_cliente, mesAño),
-
+-----------Agregado //JuanK//  24/05-------------------
+  FOREIGN KEY (tipo_operacion_contable)
+    REFERENCES Operacion_contable(id_tipo_operacion)
+      ON DELETE CASCADE,
+-----------Agregado //JuanK//  24/05--fin--------------
   FOREIGN KEY (id_inmueble)
     REFERENCES Inmuebles(id_inmueble)
     ON DELETE CASCADE,
@@ -267,9 +273,15 @@ id_inmueble integer not null,
 id_cliente integer not null,
 mesAño date not null,
 fechaVencimiento date not null,
-
+-----------Agregado //JuanK//  24/05-------------------
+tipo_operacion_contable INTEGER,
+-----------Agregado //JuanK//  24/05--fin--------------
 PRIMARY KEY (id_inmueble, id_cliente, mesAño),
-
+-----------Agregado //JuanK//  24/05-------------------
+  FOREIGN KEY (tipo_operacion_contable)
+    REFERENCES Operacion_contable(id_tipo_operacion)
+      ON DELETE CASCADE,
+-----------Agregado //JuanK//  24/05--fin--------------
   FOREIGN KEY (id_inmueble)
     REFERENCES Inmuebles(id_inmueble)
     ON DELETE CASCADE,
@@ -286,9 +298,15 @@ id_cliente integer not null,
 mesAño date not null,
 importeRecargo double precision not null,
 diasVencidos integer default 0,
-
+-----------Agregado //JuanK//  24/05-------------------
+tipo_operacion_contable INTEGER,
+-----------Agregado //JuanK//  24/05--fin--------------
 PRIMARY KEY (id_inmueble, id_cliente, mesAño),
-
+-----------Agregado //JuanK//  24/05-------------------
+  FOREIGN KEY (tipo_operacion_contable)
+    REFERENCES Operacion_contable(id_tipo_operacion)
+      ON DELETE CASCADE,
+-----------Agregado //JuanK//  24/05--fin--------------
   FOREIGN KEY (id_inmueble)
     REFERENCES Inmuebles(id_inmueble)
     ON DELETE CASCADE,
@@ -298,4 +316,11 @@ PRIMARY KEY (id_inmueble, id_cliente, mesAño),
     ON DELETE CASCADE
 );
 
+-----------Agregado //JuanK//  24/05-------------------
 
+CREATE TABLE Operacion_contable(
+  id_tipo_operacion  INTEGER NOT NULL PRIMARY KEY,
+  descripcion varchar(50),
+  debito boolean -- true:debito, false:credito
+)
+-----------Agregado //JuanK//  24/05--fin--------------

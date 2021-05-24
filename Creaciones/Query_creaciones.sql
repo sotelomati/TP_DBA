@@ -16,6 +16,10 @@ CREATE DOMAIN dni as varchar(8)
 CONSTRAINT dni_check CHECK (CAST(VALUE as INTEGER) <= 99999999);
 
 -- Creacion de tablas
+CREATE TABLE auditoria(
+	ultimo_usuario varchar(50) NOT NULL,
+	ultimo_horario timestamp NOT NULL
+);
 
 CREATE TABLE Localizaciones(
 id_localizacion integer not null PRIMARY KEY,
@@ -143,7 +147,7 @@ FOREIGN KEY (id_direccion) REFERENCES Direcciones(id_direccion),
 FOREIGN KEY (id_anuncio) REFERENCES Anuncios(id_anuncio),
 FOREIGN KEY (id_precio) REFERENCES Precios(id_precio),
 FOREIGN KEY (id_dueño) REFERENCES Dueños(id_dueño)
-);
+)INHERITS(auditoria);
 
 
 CREATE TABLE PeriodoOcupacion(

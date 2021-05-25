@@ -21,6 +21,12 @@ CREATE TABLE auditoria(
 	ultimo_horario timestamp NOT NULL
 );
 
+CREATE TABLE tipo_operacion_contable(
+ id_tipo_operacion  INTEGER NOT NULL PRIMARY KEY,
+ descripcion varchar(50),
+ debito boolean -- true:debito, false:credito
+);
+
 CREATE TABLE Localizaciones(
 id_localizacion integer not null PRIMARY KEY,
 provincia varchar(50) not null
@@ -28,7 +34,8 @@ provincia varchar(50) not null
 
 CREATE TABLE Localidades(
 id_localidad integer not null PRIMARY KEY,
-codigo_postal integer not null,
+nombre varchar(50), NOT NULL,
+codigo_postal integer null,
 id_provincia integer not null,
 FOREIGN KEY (id_provincia) REFERENCES Localizaciones(id_localizacion)
 );
@@ -247,6 +254,7 @@ CREATE TABLE Pagos(
 id_inmueble integer not null,
 id_cliente integer not null,
 mesAño date not null,
+id_tipo_operacion integer NOT NULL,
 importeCuota double precision not null,
 fechaPago date not null,
 
@@ -258,14 +266,19 @@ PRIMARY KEY (id_inmueble, id_cliente, mesAño),
 
   FOREIGN KEY (id_cliente)
     REFERENCES Clientes(id_cliente)
-    ON DELETE CASCADE
+    ON DELETE CASCADE,
+  
+   FOREIGN KEY (id_tipo_operacion)
+    REFERENCES tipo_operacion_contable(id_tipo_operacion)
 );
 
 
 CREATE TABLE Cuotas(
 id_inmueble integer not null,
 id_cliente integer not null,
+id_tipo_operacion integer NOT NULL,
 mesAño date not null,
+importe double precision,
 fechaVencimiento date not null,
 
 PRIMARY KEY (id_inmueble, id_cliente, mesAño),
@@ -276,7 +289,10 @@ PRIMARY KEY (id_inmueble, id_cliente, mesAño),
 
   FOREIGN KEY (id_cliente)
     REFERENCES Clientes(id_cliente)
-    ON DELETE CASCADE
+    ON DELETE CASCADE,
+
+  FOREIGN KEY (id_tipo_operacion)
+    REFERENCES tipo_operacion_contable(id_tipo_operacion)
 );
 
 
@@ -284,6 +300,7 @@ CREATE TABLE Recargos(
 id_inmueble integer not null,
 id_cliente integer not null,
 mesAño date not null,
+id_tipo_operacion integer NOT NULL,
 importeRecargo double precision not null,
 diasVencidos integer default 0,
 
@@ -295,7 +312,10 @@ PRIMARY KEY (id_inmueble, id_cliente, mesAño),
 
   FOREIGN KEY (id_cliente)
     REFERENCES Clientes(id_cliente)
-    ON DELETE CASCADE
+    ON DELETE CASCADE,
+
+FOREIGN KEY (id_tipo_operacion)
+REFERENCES tipo_operacion_contable(id_tipo_operacion)
 );
 
 

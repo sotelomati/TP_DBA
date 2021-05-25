@@ -75,3 +75,26 @@ insert into Dueños(id_dueño, id_persona) values (2, 11);
 insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado_inmueble, id_direccion, id_anuncio, id_precio, id_dueño) values (1, 101, 1, 1, 3, 1, 1, 2);
 insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado_inmueble, id_direccion, id_anuncio, id_precio, id_dueño) values (2, 102, 2, 2, 1, 2, 2, 2);
 insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado_inmueble, id_direccion, id_anuncio, id_precio, id_dueño) values (3, 103, 2, 1, 3, 3, 3, 2);
+
+--contratos finalidades
+insert into contratos_finalidades(id_finalidad, descripcion) values (1, 'Vacaciones');
+insert into contratos_finalidades(id_finalidad, descripcion) values (2, 'Ocupacion temporal');
+insert into contratos_finalidades(id_finalidad, descripcion) values (3, 'Negocios');
+insert into contratos_finalidades(id_finalidad, descripcion) values (4, 'otros');
+
+--Estados de los contratos
+insert into contratos_estados(id_estado, descripcion) values (1, 'Activo');
+insert into contratos_estados(id_estado, descripcion) values (2, 'Finalizado');
+insert into contratos_estados(id_estado, descripcion) values (3, 'Baja a pedido del cliente');
+insert into contratos_estados(id_estado, descripcion) values (4, 'Baja a pedido del dueño');
+
+--Contratos
+insert into ContratoAlquiler(id_inmueble, id_cliente, fechacontrato, id_estado, periodo_vigencia, vencimiento_cuota, id_finalidad, precio_inicial) 
+							 values (1005, 1, CURRENT_DATE, 1, 6, 44510, 2, 1500);						 
+insert into ContratoAlquiler(id_inmueble, id_cliente, fechacontrato, id_estado, periodo_vigencia, vencimiento_cuota, id_finalidad, precio_inicial) 
+							 values (1000, 3, CURRENT_DATE, 1, 6, 44510, 2, 1500);							 
+
+
+
+
+

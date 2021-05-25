@@ -12,18 +12,20 @@ IF NEW.id_estado = OLD.id_estado THEN
 	RETURN NEW;
 ELSEIF NEW.id_estado <> 1 THEN --SI es 1 estaba activo
 	SELECT descripcion INTO v_motivo_baja FROM contratos_estados WHERE id_estado = new.id_estado; 
+	
 	UPDATE periodoocupacion
 	SET fechabaja=CURRENT_DATE, motivobaja=v_motivo_baja
-	WHERE id_inmueble= OLD.id_inmueble and fechaInicio = OLD.fechaCotrato;
+	WHERE id_inmueble= OLD.id_inmueble and fechaInicio = OLD.fechaContrato;
+	RETURN NEW;
 ELSEIF NEW.id_estado = 1 AND OLD.id_estado <> 1 THEN
-	IF EXISTS (select * from periodoOcupacion WHERE id_inmueble= OLD.id_inmueble 
-			   AND fechaBaja = NULL AND fechaInicio <> OLD.fechaContrato) THEN
+	IF EXISTS (select * from periodoOcupacion WHERE id_inmueble = OLD.id_inmueble 
+			   AND fechaBaja IS NULL) THEN
 		RAISE NOTICE 'No se permite abrir un contrato cuando ya se abrio otro posteriormente';
 		RETURN NULL; -- NO Permito abrir un contrato cuando se abrio otro mas actual
 	ELSE 
 		UPDATE periodoocupacion
 		SET fechabaja=NULL, motivobaja=NULL
-		WHERE id_inmueble= OLD.id_inmueble and fechaInicio = OLD.fechaCotrato;
+		WHERE id_inmueble= OLD.id_inmueble and fechaInicio = OLD.fechaContrato;
 	END IF;
 END IF;
 

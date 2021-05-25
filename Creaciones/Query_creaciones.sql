@@ -158,11 +158,11 @@ FOREIGN KEY (id_dueño) REFERENCES Dueños(id_dueño)
 
 
 CREATE TABLE PeriodoOcupacion(
-id_periodo integer not null PRIMARY KEY,
-id_inmueble integer not null,
-fechaInicio date not null,
-fechaBaja date not null,
-motivoBaja varchar(100),
+id_periodo SERIAL NOT NULL PRIMARY KEY,
+id_inmueble integer NOT NULL,
+fechaInicio date NOT NULL,
+fechaBaja date NULL,
+motivoBaja varchar(100) NULL,
 FOREIGN KEY (id_inmueble) REFERENCES Inmuebles(id_inmueble)
 );
 

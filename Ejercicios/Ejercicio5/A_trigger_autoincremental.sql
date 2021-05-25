@@ -19,7 +19,7 @@ IF NOT EXISTS(select * from inmuebles) THEN
 	NEW.id_inmueble = 1000;
 
 	
-ELSEIF NEW.id_inmueble = NULL THEN
+ELSEIF NEW.id_inmueble IS NULL THEN
 	select id_inmueble+1 INTO new.id_inmueble 
 	FROM inmuebles 
 	order by ultimo_horario DESC

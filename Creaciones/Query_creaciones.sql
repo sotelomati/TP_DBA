@@ -34,7 +34,7 @@ provincia varchar(50) not null
 
 CREATE TABLE Localidades(
 id_localidad integer not null PRIMARY KEY,
-nombre varchar(50), NOT NULL,
+nombre varchar(50) NOT NULL,
 codigo_postal integer null,
 id_provincia integer not null,
 FOREIGN KEY (id_provincia) REFERENCES Localizaciones(id_localizacion)
@@ -88,7 +88,7 @@ descripcion varchar(50) not null
 );
 
 
-CREATE TABLE Estados(
+CREATE TABLE Inmuebles_Estados(
 id_estado integer not null PRIMARY KEY,
 descripcion varchar(50) not null
 );
@@ -142,14 +142,14 @@ CREATE TABLE Inmuebles(
 id_inmueble integer not null PRIMARY KEY,
 id_tipoInmueble integer not null,
 id_tipoOperacion integer not null,
-id_estado integer not null,
+id_estado_inmueble integer not null,
 id_direccion integer not null,
 id_anuncio integer not null,
 id_precio integer not null,
 id_dueño integer not null,
 FOREIGN KEY (id_tipoInmueble) REFERENCES TipoInmueble(id_tipo),
 FOREIGN KEY (id_tipoOperacion) REFERENCES TipoOperacion(id_operacion),
-FOREIGN KEY (id_estado) REFERENCES Estados(id_estado),
+FOREIGN KEY (id_estado_inmueble) REFERENCES imueble_estados(id_estado),
 FOREIGN KEY (id_direccion) REFERENCES Direcciones(id_direccion),
 FOREIGN KEY (id_anuncio) REFERENCES Anuncios(id_anuncio),
 FOREIGN KEY (id_precio) REFERENCES Precios(id_precio),

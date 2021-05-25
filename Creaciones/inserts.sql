@@ -70,3 +70,8 @@ insert into Clientes(id_cliente, id_persona) values (3, 12);
 
 --Ingreso de dueños
 insert into Dueños(id_dueño, id_persona) values (2, 11);
+
+--Inmmuebles
+insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado, id_direccion, id_anuncio, id_precio, id_dueño) values (1, 101, 1, 1, 3, 1, 1, 2);
+insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado, id_direccion, id_anuncio, id_precio, id_dueño) values (2, 102, 2, 2, 1, 2, 2, 2);
+insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado, id_direccion, id_anuncio, id_precio, id_dueño) values (3, 103, 2, 1, 4, 3, 3, 2);

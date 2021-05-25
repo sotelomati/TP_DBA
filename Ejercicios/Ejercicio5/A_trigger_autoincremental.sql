@@ -5,11 +5,6 @@
 3. Si el Insert viene con nulo en este atributo y ademas existen filas en la tabla debe asignar el próximo nro
 */
 
-CREATE TRIGGER TG_autoincremental_control
-	before insert on inmuebles
-	FOR EACH ROW
-	EXECUTE PROCEDURE SP_autoincremental_control();
-
 CREATE OR REPLACE FUNCTION SP_autoincremental_control()
 RETURNS trigger AS
 $$
@@ -34,5 +29,9 @@ RETURN NEW;
 END;
 $$ LANGUAGE PLPGSQL;
 
+CREATE TRIGGER TG_autoincremental_control
+	before insert on inmuebles
+	FOR EACH ROW
+	EXECUTE PROCEDURE SP_autoincremental_control();
 
 	

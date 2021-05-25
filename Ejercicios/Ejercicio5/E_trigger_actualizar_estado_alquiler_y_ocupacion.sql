@@ -3,11 +3,6 @@ Realice una regla que permita actualizar el estado de un contrato de alquiler
 y el periodo de ocupación con una sola operación.
 */
 
-CREATE TRIGGER TG_actualizar_periodo_ocupacion
-BEFORE UPDATE ON contratoAlquiler
-FOR EACH ROW 
-EXECUTE PROCEDURE SP_actualizar_periodo_ocupacion();
-
 CREATE OR REPLACE FUNCTION SP_actualizar_periodo_ocupacion()
 RETURNS TRIGGER AS
 $$
@@ -36,3 +31,9 @@ RETURN NEW;
 
 END;
 $$ LANGUAGE PLPGSQL;
+
+
+CREATE TRIGGER TG_actualizar_periodo_ocupacion
+BEFORE UPDATE ON contratoAlquiler
+FOR EACH ROW 
+EXECUTE PROCEDURE SP_actualizar_periodo_ocupacion();

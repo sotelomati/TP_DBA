@@ -53,10 +53,10 @@ insert into TipoOperacion(id_operacion, descripcion) values (1, 'Venta');
 insert into TipoOperacion(id_operacion, descripcion) values (2, 'Alquiler');
 
 -- Estados de los inmuebles
-insert into imueble_estados(id_estado, descripcion) values (1, 'Anulado');
-insert into imueble_estados(id_estado, descripcion) values (2, 'Disponible');
-insert into imueble_estados(id_estado, descripcion) values (3, 'Alquilado');
-insert into imueble_estados(id_estado, descripcion) values (4, 'Vendido');
+insert into inmuebles_estados(id_estado, descripcion) values (1, 'Anulado');
+insert into inmuebles_estados(id_estado, descripcion) values (2, 'Disponible');
+insert into inmuebles_estados(id_estado, descripcion) values (3, 'Alquilado');
+insert into inmuebles_estados(id_estado, descripcion) values (4, 'Vendido');
 
 --Ingreso de personas
 insert into Personas(id_persona, dni, fechanacimiento, fechainscripcion, nombrecompleto, id_direccion) values (10, '41154249', '20-11-1998', '24-05-2021', 'Matias Nicolas Sotelo',1);
@@ -68,10 +68,10 @@ insert into Clientes(id_cliente, id_persona) values (1, 10);
 insert into Clientes(id_cliente, id_persona) values (2, 11);
 insert into Clientes(id_cliente, id_persona) values (3, 12);
 
---Ingreso de dueños
-insert into Dueños(id_dueño, id_persona) values (2, 11);
+--Ingreso de dueÃ±os
+insert into DueÃ±os(id_dueÃ±o, id_persona) values (2, 11);
 
 --Inmmuebles
-insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado, id_direccion, id_anuncio, id_precio, id_dueño) values (1, 101, 1, 1, 3, 1, 1, 2);
-insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado, id_direccion, id_anuncio, id_precio, id_dueño) values (2, 102, 2, 2, 1, 2, 2, 2);
-insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado, id_direccion, id_anuncio, id_precio, id_dueño) values (3, 103, 2, 1, 4, 3, 3, 2);
+insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado_inmueble, id_direccion, id_anuncio, id_precio, id_dueÃ±o) values (1, 101, 1, 1, 3, 1, 1, 2);
+insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado_inmueble, id_direccion, id_anuncio, id_precio, id_dueÃ±o) values (2, 102, 2, 2, 1, 2, 2, 2);
+insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado_inmueble, id_direccion, id_anuncio, id_precio, id_dueÃ±o) values (3, 103, 2, 1, 3, 3, 3, 2);

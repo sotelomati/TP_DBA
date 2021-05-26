@@ -7,7 +7,7 @@ RETURNS TRIGGER AS
 $$
 BEGIN
 	INSERT INTO periodoocupacion(id_inmueble, fechainicio, fechabaja, motivobaja)
-	VALUES (NEW.id_inmueble, CURRENT_DATE, NULL, NULL);
+	VALUES (NEW.id_inmueble, NEW.fechaContrato, NULL, NULL);
 	RETURN NEW;
 END;
 $$ LANGUAGE PLPGSQL;

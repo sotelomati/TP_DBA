@@ -73,8 +73,12 @@ insert into Dueños(id_dueño, id_persona) values (2, 11);
 
 --Inmmuebles
 insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado_inmueble, id_direccion, id_anuncio, id_precio, id_dueño) values (1, 101, 1, 1, 3, 1, 1, 2);
-insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado_inmueble, id_direccion, id_anuncio, id_precio, id_dueño) values (2, 102, 2, 2, 1, 2, 2, 2);
-insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado_inmueble, id_direccion, id_anuncio, id_precio, id_dueño) values (3, 103, 2, 1, 3, 3, 3, 2);
+insert into Inmuebles( id_tipoInmueble, id_tipoOperacion, id_estado_inmueble, 
+					  id_direccion, id_anuncio, id_precio, id_dueño) 
+					  values ( 102, 2, 2, 1, 2, 2, 2);
+insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado_inmueble, 
+					  id_direccion, id_anuncio, id_precio, id_dueño) 
+					  values (1003, 103, 2, 1, 3, 3, 3, 2);
 
 --contratos finalidades
 insert into contratos_finalidades(id_finalidad, descripcion) values (1, 'Vacaciones');
@@ -90,10 +94,35 @@ insert into contratos_estados(id_estado, descripcion) values (4, 'Baja a pedido 
 
 --Contratos
 insert into ContratoAlquiler(id_inmueble, id_cliente, fechacontrato, id_estado, periodo_vigencia, vencimiento_cuota, id_finalidad, precio_inicial) 
-							 values (1005, 1, CURRENT_DATE, 1, 6, 44510, 2, 1500);						 
+							 values (1000, 1, '20-05-2021', 1, 6, 44510, 2, 1500);						 
 insert into ContratoAlquiler(id_inmueble, id_cliente, fechacontrato, id_estado, periodo_vigencia, vencimiento_cuota, id_finalidad, precio_inicial) 
-							 values (1000, 3, CURRENT_DATE, 1, 6, 44510, 2, 1500);							 
+							 values (1000, 3, '26-05-2021', 1, 6, 44510, 2, 1500);							 
 
+--Tipos de Garantias
+insert into TipoGarantia(id_garantia, descripcion) values (1, 'Recibo de Sueldo');
+insert into TipoGarantia(id_garantia, descripcion) values (2, 'Titulo de propiedad');
+
+--Garantes
+insert into Garante(dni, id_inmuble, id_cliente, nombre, fechanacimiento, id_tipogarantia) values ('25828924', 1005, 1, 'Daniel XL', '35176', 1);
+insert into Garante(dni, id_inmuble, id_cliente, nombre, fechanacimiento, id_tipogarantia) values ('41154249', 1000, 3, 'El Cejas', '36691', 2);
+insert into Garante(dni, id_inmuble, id_cliente, nombre, fechanacimiento, id_tipogarantia) values ('11111111', 3, 3, 'Jaun del Gualeyan', '37077', 1);
+
+select * from contratoAlquiler
+
+
+select * from contratoAlquiler
+select * from periodoocupacion
+select * from inmuebles
+
+
+delete from inmuebles where id_inmueble = 1002
+delete from contratoalquiler
+delete from periodoocupacion
+
+select * from cta_cte_cliente
+
+
+UPDATE contratoAlquiler SET id_estado = 1 where id_inmueble =1000 and id_cliente = 1
 
 
 

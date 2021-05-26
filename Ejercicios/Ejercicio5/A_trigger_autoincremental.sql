@@ -8,6 +8,8 @@
 CREATE OR REPLACE FUNCTION SP_autoincremental_control()
 RETURNS trigger AS
 $$
+DECLARE v_contador integer = 1; 
+DECLARE v_id_valido inmuebles.id_inmueble%TYPE;
 BEGIN
 --chequeo si es la primera fila
 IF NOT EXISTS(select * from inmuebles) THEN
@@ -15,10 +17,14 @@ IF NOT EXISTS(select * from inmuebles) THEN
 
 	
 ELSEIF NEW.id_inmueble IS NULL THEN
-	select id_inmueble+1 INTO new.id_inmueble 
-	FROM inmuebles 
-	order by ultimo_horario DESC
-	LIMIT 1;
+	select id_inmueble+v_contador INTO v_id_valido FROM inmuebles 
+	order by ultimo_horario DESC LIMIT 1;
+	WHILE EXISTS ( select id_inmueble FROM inmuebles where id_inmueble = v_id_valido) LOOP
+		v_contador = v_contador + 1;
+		select id_inmueble+v_contador INTO v_id_valido FROM inmuebles 
+		order by ultimo_horario DESC LIMIT 1;
+	END LOOP;
+	new.id_inmueble = v_id_valido;
 
 --En este caso no viene nulo y no es la primera fila
 ELSEIF EXISTS (select id_inmueble from inmuebles where id_inmueble = NEW.id_inmueble) THEN

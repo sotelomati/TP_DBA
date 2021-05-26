@@ -10,7 +10,7 @@ DECLARE v_motivo_baja periodoOcupacion.motivoBaja%TYPE;
 BEGIN
 IF NEW.id_estado = OLD.id_estado THEN
 	RETURN NEW;
-ELSEIF NEW.id_estado <> 1 THEN --SI es 1 estaba activo
+ELSEIF NEW.id_estado <> 1 AND old.id_estado = 1 THEN --SI es 1 estaba activo
 	SELECT descripcion INTO v_motivo_baja FROM contratos_estados WHERE id_estado = new.id_estado; 
 	
 	UPDATE periodoocupacion

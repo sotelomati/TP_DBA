@@ -8,11 +8,11 @@ además que si el inmueble está en alquiler y en venta al mismo tiempo debe
 visualizarse en la misma fila.
 */
 
-CREATE VIEW info_inmuebles_view AS 
-	SELECT id_inmueble,
-			id_tipoInmueble ,
+CREATE VIEW info_inmuebles_completa AS 
+	SELECT  tipo.descripcion ,
 			anu.titulo ,
-			id_precio ,
+			pre.monto ,
+			pre.acronimo,
 			per.nombreCompleto,
 			(CASE 	WHEN (1 = (SELECT id_operacion FROM tipooperacion WHERE id_inmueble = Inmuebles.id_inmueble and id_operacion = 1))
 					THEN 'SI'
@@ -48,11 +48,9 @@ CREATE VIEW info_inmuebles_view AS
 	INNER JOIN direccion_completa direc ON direc.id_direccion = inmuebles.id_direccion
 	INNER JOIN dueños due ON due.id_dueño = inmuebles.id_dueño
 	INNER JOIN personas per ON per.id_persona = due.id_persona
-	
 	INNER JOIN anuncios anu ON anu.id_anuncio = inmuebles.id_anuncio
-	INNER JOIN precios pre ON pre.id_precio
-	
-	select * from anuncios
+	INNER JOIN precio_inmueble pre ON pre.id_precio = inmuebles.id_precio 
+	INNER JOIN tipoInmueble tipo ON tipo.id_tipo = inmuebles.id_tipoInmueble
 	
 	
 	

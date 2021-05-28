@@ -1,15 +1,3 @@
---CREACION DE BASE DE DATOS
-
-CREATE DATABASE "TP_DBA"
-    WITH 
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    CONNECTION LIMIT = -1;
-
-COMMENT ON DATABASE "TP_DBA"
-    IS 'Trabajo Practico de Base de datos Activas
-';
-
 -- Creacion de dominios
 
 CREATE DOMAIN dni as varchar(8)
@@ -17,7 +5,7 @@ CONSTRAINT dni_check CHECK (CAST(VALUE as INTEGER) <= 99999999);
 
 CREATE DOMAIN mesaño as varchar(7)
 CONSTRAINT format_check CHECK (3 = position('-' in VALUE))
-CONSTRAINT date_check CHECK (CURRENT_DATE = TO_DATE('01-' || VALUE, 'DD-MM-YYYY'))
+CONSTRAINT date_check CHECK (CURRENT_DATE = TO_DATE('01-' || VALUE, 'DD-MM-YYYY'));
 
 
 -- Creacion de tablas

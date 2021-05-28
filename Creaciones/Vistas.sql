@@ -5,7 +5,7 @@ CREATE VIEW direccion_completa AS
 			loca.provincia
 	FROM direcciones d
 	INNER JOIN Localidades l ON d.id_localidad = l.id_localidad
-	INNER JOIN Localizaciones loca ON l.id_provincia = loca.id_localizacion
+	INNER JOIN Localizaciones loca ON l.id_provincia = loca.id_localizacion;
 
 /*Vista de precios*/
 CREATE VIEW precio_inmueble 
@@ -13,4 +13,4 @@ CREATE VIEW precio_inmueble
     SELECT p.id_precio, p.monto, d.acronimo 
 	FROM Precios p
     INNER JOIN Divisas d ON p.id_divisa = d.id_divisa
-	)
+	);

@@ -8,7 +8,6 @@ CREATE VIEW direccion_completa AS
 	INNER JOIN Localizaciones loca ON l.id_provincia = loca.id_localizacion
 
 /*Vista de precios*/
-DROP VIEW precio_inmueble
 CREATE VIEW precio_inmueble 
 	AS (
     SELECT p.id_precio, p.monto, d.acronimo 

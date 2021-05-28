@@ -15,6 +15,11 @@ COMMENT ON DATABASE "TP_DBA"
 CREATE DOMAIN dni as varchar(8)
 CONSTRAINT dni_check CHECK (CAST(VALUE as INTEGER) <= 99999999);
 
+CREATE DOMAIN mesaño as varchar(7)
+CONSTRAINT format_check CHECK (3 = position('-' in VALUE))
+CONSTRAINT date_check CHECK (CURRENT_DATE = TO_DATE('01-' || VALUE, 'DD-MM-YYYY'))
+
+
 -- Creacion de tablas
 CREATE TABLE auditoria(
 	ultimo_usuario varchar(50) NOT NULL,
@@ -253,10 +258,10 @@ PRIMARY KEY (id_inmueble, id_cliente),
 CREATE TABLE Pagos(
 id_inmueble integer not null,
 id_cliente integer not null,
-mesAño date not null,
+mesAño mesaño not null,
 id_tipo_operacion integer NOT NULL,
 importeCuota double precision not null,
-fechaPago date not null,
+fechaPago date not null default CURRENT_DATE,
 
 PRIMARY KEY (id_inmueble, id_cliente, mesAño),
 
@@ -277,7 +282,7 @@ CREATE TABLE Cuotas(
 id_inmueble integer not null,
 id_cliente integer not null,
 id_tipo_operacion integer NOT NULL,
-mesAño date not null,
+mesAño mesaño not null,
 importe double precision,
 fechaVencimiento date not null,
 
@@ -299,7 +304,7 @@ PRIMARY KEY (id_inmueble, id_cliente, mesAño),
 CREATE TABLE Recargos(
 id_inmueble integer not null,
 id_cliente integer not null,
-mesAño date not null,
+mesAño mesaño not null,
 id_tipo_operacion integer NOT NULL,
 importeRecargo double precision not null,
 diasVencidos integer default 0,

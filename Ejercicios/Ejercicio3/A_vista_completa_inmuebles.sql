@@ -9,7 +9,8 @@ visualizarse en la misma fila.
 */
 
 CREATE VIEW info_inmuebles_completa AS 
-	SELECT  tipo.descripcion ,
+	SELECT  inmuebles.id_inmueble,
+			tipo.descripcion ,
 			anu.titulo ,
 			pre.monto ,
 			pre.acronimo,

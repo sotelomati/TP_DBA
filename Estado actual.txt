@@ -6,7 +6,7 @@ Ejercicio 2 Finalizado, faltan modificaciones
 
 Ejercicio 3:
 -A Finalizado
--B Pendiente
+-B Finalizado
 -C Finalizado
 
 
@@ -18,7 +18,7 @@ Ejercicio 4:
 
 Ejercicio 5:
 -A Finalizado
--B Pendiente
+-B Finalizado
 -C Pendiente
 -D Finalizado
 -E Finalizado

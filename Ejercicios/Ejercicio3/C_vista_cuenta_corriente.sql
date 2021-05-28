@@ -5,7 +5,6 @@ las cuotas generadas, los montos de recargo de cada cuota (si los tiene)y los pa
 */
 
 
-
 --VISTA DE CLIENTES
 CREATE VIEW cuota_cta_cte AS
 select cuotas.id_cliente, personas.nombreCompleto, mesaño, tipo_operacion_contable.descripcion, 
@@ -33,7 +32,7 @@ INNER JOIN tipo_operacion_contable ON recargos.id_tipo_operacion = tipo_operacio
 INNER JOIN clientes ON clientes.id_cliente = recargos.id_cliente
 INNER JOIN personas ON clientes.id_persona = personas.id_persona;
 
-
+--VISTA cta_cte_cliente
 CREATE VIEW cta_cte_cliente AS
 select * from(
 	SELECT * FROM cuota_cta_cte

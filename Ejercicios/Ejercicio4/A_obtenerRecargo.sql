@@ -2,7 +2,7 @@
 --Recibe el id_inmueble e id_cliente que hacen al id del contrato
 -- LA FECHA VENCIMIENTO ES DE LA CUOTA
 
-CREATE OR REPLACE FUNCTION calcular_recargo(inmueble integer, cliente integer, fecha_cuota date)
+CREATE OR REPLACE FUNCTION calcular_recargo(inmueble integer, cliente integer, fecha_cuota mesaño)
 RETURNS double precision AS
 $$ 
 DECLARE v_recargo double precision = 0;
@@ -12,26 +12,28 @@ DECLARE diferencia_de_dias integer = 0;
 DECLARE v_fecha_vencimiento date;
 BEGIN
 --Obtengo el monto a cobrar
-select monto from precioAlquiler into v_monto
+select importe from precioAlquiler INTO v_monto
 where id_inmueble = inmueble 
 and id_cliente = cliente
-and date_part('MONTH', age(fechaDefinicion, fehca_cuota)) <= 0 
-order by date_part('MONTH', age(fechaDefinicion, fecha_cuota)) asc;
+and date_part('MONTH', age(fechaDefinicion, SP_convertir_mesaño_date(fecha_cuota))) <= 0 
+order by date_part('MONTH', age(fechaDefinicion, SP_convertir_mesaño_date(fecha_cuota))) asc;
 
 select fechaVencimiento INTO v_fecha_vencimiento from cuotas
 where id_inmueble = inmueble 
 and id_cliente = cliente
-and mesaño = fecha_cuota;
+and mesaño LIKE fecha_cuota;
 
-diferencia_de_dias = date_part('DAY', age(current_date, fecha_vencimiento));
+diferencia_de_dias = date_part('DAY', age(current_date, v_fecha_vencimiento));
 IF  diferencia_de_dias > 0 THEN
 	v_recargo = diferencia_de_dias * (v_monto * porcentaje_recargo);
+	
 END IF;
 
 RETURN v_recargo;
 END;
 $$ 
 LANGUAGE plpgsql;
+
 
 /*
 Como Funcion?

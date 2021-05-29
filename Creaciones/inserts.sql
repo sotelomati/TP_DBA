@@ -104,9 +104,17 @@ insert into ContratoAlquiler(id_inmueble, id_cliente, fechacontrato, id_estado, 
 insert into TipoGarantia(id_garantia, descripcion) values (1, 'Recibo de Sueldo');
 insert into TipoGarantia(id_garantia, descripcion) values (2, 'Titulo de propiedad');
 
+--Tipo operaciones contables
+INSERT INTO public.tipo_operacion_contable(
+	id_tipo_operacion, descripcion, debito)
+	VALUES (1, 'Cuota', True),
+	(2,'Pago', False),
+	(3, 'Recargo',True);
 
-
-
+--Cuotas
+INSERT INTO public.cuotas(
+	id_inmueble, id_cliente, id_tipo_operacion, "mesaño", importe, fechavencimiento)
+	VALUES (1000, 1, 1, '05-2021', 15000, '25-05-2021');
 
 
 

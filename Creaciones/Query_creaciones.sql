@@ -5,7 +5,7 @@ CONSTRAINT dni_check CHECK (CAST(VALUE as INTEGER) <= 99999999);
 
 CREATE DOMAIN mesaño as varchar(7)
 CONSTRAINT format_check CHECK (3 = position('-' in VALUE))
-CONSTRAINT date_check CHECK (CURRENT_DATE = TO_DATE('01-' || VALUE, 'DD-MM-YYYY'));
+CONSTRAINT date_check CHECK ('01-01-1990' < TO_DATE('01-' || VALUE, 'DD-MM-YYYY'));
 
 
 -- Creacion de tablas
@@ -226,12 +226,13 @@ CONSTRAINT FK_GARANTE_TIPO
 );
 
 CREATE TABLE PrecioAlquiler(
+id_precioAlquiler serial not null,
 id_inmueble integer not null,
 id_cliente integer not null,
 importe double precision not null,
 fechaDefinicion date not null,
 
-PRIMARY KEY (id_inmueble, id_cliente),
+PRIMARY KEY (id_inmueble, id_cliente,id_precioAlquiler),
 
   FOREIGN KEY (id_inmueble)
     REFERENCES Inmuebles(id_inmueble)

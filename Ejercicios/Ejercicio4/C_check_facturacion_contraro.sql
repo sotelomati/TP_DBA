@@ -8,15 +8,15 @@ iii. que sea el mes actual o siguiente próximo
 	-Genere la cuota del contrato.
 */
 --devuelve true o false si el contrato esta activo
-CREATE OR REPLACE FUNCTION SP_contrato_isActivo(inmueble integer, cliente integer)
+CREATE OR REPLACE FUNCTION SP_contrato_isActivo(v_inmueble integer, v_cliente integer, v_mesaño mesaño)
 RETURNS BOOLEAN AS
 $$
 DECLARE estado integer;
 BEGIN
-	select id_estado INTO estado FROM contratoAlquiler where id_cliente = cliente AND id_inmueble = inmueble;
-	IF estado = 1 THEN
-		RETURN TRUE;
-	ELSE RETURN FALSE;
+	select id_estado INTO estado FROM contratoAlquiler where id_cliente = v_cliente AND id_inmueble = v_inmueble;
+	IF estado = 1 THEN -- 1=activo
+		IF(EXISTS(select * from pagos where id_cliente = v_cliente AND id_inmueble = v_inmueble AND mesaño=v_mesaño )  
+	ELSE RETURN False;
 	END IF;
 END;
 $$ LANGUAGE PLPGSQL;

@@ -12,11 +12,11 @@ DECLARE diferencia_de_dias integer = 0;
 DECLARE v_fecha_vencimiento date;
 BEGIN
 --Obtengo el monto a cobrar
-select importe from precioAlquiler INTO v_monto
+select importe INTO v_monto from precioAlquiler 
 where id_inmueble = inmueble 
 and id_cliente = cliente
 and date_part('MONTH', age(fechaDefinicion, SP_convertir_mesaño_date(fecha_cuota))) <= 0 
-order by date_part('MONTH', age(fechaDefinicion, SP_convertir_mesaño_date(fecha_cuota))) asc;
+order by date_part('MONTH', age(fechaDefinicion, SP_convertir_mesaño_date(fecha_cuota))) DESC;
 
 select fechaVencimiento INTO v_fecha_vencimiento from cuotas
 where id_inmueble = inmueble 

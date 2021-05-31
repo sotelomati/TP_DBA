@@ -5,13 +5,12 @@ $$
 DECLARE v_importe double precision = 0;
 BEGIN
 	select importe INTO v_importe from precioAlquiler 
-	where id_inmueble = inmueble 
-	and id_cliente = cliente
-	and date_part('MONTH', age(fechaDefinicion, SP_convertir_mesaño_date(fecha_cuota))) <= 0 
-	order by date_part('MONTH', age(fechaDefinicion, SP_convertir_mesaño_date(fecha_cuota))) DESC;
+	where id_inmueble =1000
+	and id_cliente = 1
+	and SP_es_mayor_mesaño(fechaContable, SP_convertir_date_mesaño(fechaDefinicion)) 
+	order by fechadefinicion DESC
+	LIMIT 1;
 	
 	RETURN v_importe;
 END;
 $$ LANGUAGE PLPGSQL;
-
-

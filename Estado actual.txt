@@ -24,3 +24,12 @@ Ejercicio 5:
 -E Finalizado
 
 
+problemas con ejercicio 4_c
+	no funcioa la funcion de check
+
+problema conceptual en tabla de contrato alquiler
+problema de pago con cuota al asociar
+
+borrar la tabla auditoria y agregar manualmente las columnas a las tablas que haga falta
+
+modificar cupta, pago y recargo con Default en el tipo de operacion contable

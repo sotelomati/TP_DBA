@@ -1,4 +1,3 @@
-
 CREATE OR REPLACE FUNCTION SP_agregar_fecha_vencimiento()
     RETURNS TRIGGER AS 
     $$

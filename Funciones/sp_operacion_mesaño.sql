@@ -1,27 +1,24 @@
 -- Operacion restar meses
-create or replace function sp_operacion_resta_mes_año(v_mesaño mesaño, v_valor integer)
-returns mesaño as
+CREATE OR REPLACE FUNCTION sp_operacion_resta_mes_año(v_mesaño mesaño, v_valor INTEGER)
+RETURNS mesaño AS
 $$
-declare retorno mesaño;
+DECLARE retorno mesaño;
 BEGIN
-	select SP_convertir_date_mesaño(cast(SP_convertir_mesaño_date(v_mesaño) - (select (CAST(v_valor AS varchar) || ' MONTH')::interval) as date)) into retorno;
-	return retorno;
+	SELECT SP_convertir_date_mesaño(CAST(SP_convertir_mesaño_date(v_mesaño) - (SELECT (CAST(v_valor AS VARCHAR) || ' MONTH')::INTERVAL) AS DATE)) INTO retorno;
+	RETURN retorno;
 END;
 $$
-language plpgsql;
+LANGUAGE plpgsql;
 
 
 -- Operacion sumar meses
-create or replace function sp_operacion_suma_mes_año(v_mesaño mesaño, v_valor integer)
-returns mesaño as
+CREATE OR REPLACE FUNCTION sp_operacion_suma_mes_año(v_mesaño mesaño, v_valor INTEGER)
+RETURNS mesaño AS
 $$
-declare retorno mesaño;
+DECLARE retorno mesaño;
 BEGIN
-	select SP_convertir_date_mesaño(cast(SP_convertir_mesaño_date(v_mesaño) + (select (CAST(v_valor AS varchar) || ' MONTH')::interval) as date)) into retorno;
-	return retorno;
+	SELECT SP_convertir_date_mesaño(CAST(SP_convertir_mesaño_date(v_mesaño) + (SELECT (CAST(v_valor AS VARCHAR) || ' MONTH')::INTERVAL) AS DATE)) INTO retorno;
+	RETURN retorno;
 END;
 $$
-language plpgsql;
-
-
-
+LANGUAGE plpgsql;

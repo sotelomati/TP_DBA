@@ -3,8 +3,8 @@ RETURNS BOOLEAN AS
 $$
 BEGIN
 	INSERT INTO public.cuotas(
-	id_inmueble, id_cliente, "mesaño", fechavencimiento)
-	VALUES (v_inmueble, v_cliente, fechaCrear, CURRENT_DATE);
+	id_inmueble, id_cliente, "mesaño")
+	VALUES (v_inmueble, v_cliente, fechaCrear);
 	RETURN TRUE;
 END;
 $$ LANGUAGE PLPGSQL;

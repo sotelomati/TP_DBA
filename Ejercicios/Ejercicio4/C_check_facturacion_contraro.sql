@@ -35,13 +35,11 @@ BEGIN
 		RETURN FALSE;
 	ELSE
 		--este if verifica si la anterior esta paga
-		IF (sp_esta_paga_bool(inmueble, cliente, SP_convertir_date_mesaño
-			(DATE(SP_convertir_mesaño_date('05-2021') - interval '1 MONTH'))))
-			THEN
-			--Este if verifica si esta creada
-			IF SP_esta_paga(inmueble, cliente, v_mesaño) THEN
-			
-			ELSE
+		IF (sp_esta_paga_bool(inmueble, cliente, sp_operacion_resta_mes_año(v_mesaño, 1)) THEN
+			--Este if verifica si esta creada y sino la creo
+			IF NOT SP_existe_cuota(inmueble, cliente, v_mesaño) THEN
+				SP_crear_cuota(inmueble, cliente, v_mesaño);
+			END IF;
 			
 		END IF;
 			

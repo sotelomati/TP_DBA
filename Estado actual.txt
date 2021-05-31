@@ -12,7 +12,7 @@ Ejercicio 3:
 
 Ejercicio 4:
 -A Finalizado
--C Pendiente
+-C Pendiente (Falta punto 2 item 3)
 -D Pendiente
 -E Pendiente
 

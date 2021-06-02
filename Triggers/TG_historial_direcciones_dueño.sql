@@ -1,4 +1,4 @@
-
+ 
 CREATE TABLE Historial_Direcciones(
 id_historial integer not null PRIMARY KEY,
 id_dueño integer,

@@ -49,8 +49,8 @@ insert into tipoInmueble(id_tipo, descripcion) values (105, 'Cochera');
 insert into tipoInmueble(id_tipo, descripcion) values (106, 'Galpon');
 
 -- Tipos de operaciones
-insert into TipoOperacion(id_operacion, descripcion) values (1, 'Venta');
-insert into TipoOperacion(id_operacion, descripcion) values (2, 'Alquiler');
+insert into operaciones(id_operacion, descripcion) values (1, 'Venta');
+insert into operaciones(id_operacion, descripcion) values (2, 'Alquiler');
 
 -- Estados de los inmuebles
 insert into inmuebles_estados(id_estado, descripcion) values (1, 'Anulado');
@@ -72,15 +72,22 @@ insert into Clientes(id_cliente, id_persona) values (3, 12);
 insert into Dueños(id_dueño, id_persona) values (2, 11);
 
 --Inmmuebles
-insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado_inmueble, 
+insert into Inmuebles(id_inmueble, id_tipoInmueble, id_estado_inmueble, 
 					  id_direccion, id_anuncio, id_precio, id_dueño) 
-					  values (1, 101, 1, 1, 3, 1, 1, 2);
-insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado_inmueble, 
+					  values (1, 101, 1, 3, 1, 1, 2);
+insert into Inmuebles(id_inmueble, id_tipoInmueble, id_estado_inmueble, 
 					  id_direccion, id_anuncio, id_precio, id_dueño) 
-					  values (1002, 102, 2, 2, 1, 2, 2, 2);
-insert into Inmuebles(id_inmueble, id_tipoInmueble, id_tipoOperacion, id_estado_inmueble, 
+					  values (1002, 102, 2, 1, 2, 2, 2);
+insert into Inmuebles(id_inmueble, id_tipoInmueble, id_estado_inmueble, 
 					  id_direccion, id_anuncio, id_precio, id_dueño) 
-					  values (1003, 103, 2, 1, 3, 3, 3, 2);
+					  values (1003, 103, 1, 3, 3, 3, 2);
+					  select * from inmuebles
+--inmuebles operaciones
+INSERT INTO public.inmuebles_operaciones(id_inmueble, id_operacion)
+	VALUES  (1000, 1),
+			(1002, 1),
+			(1000, 2),
+			(1003, 2);
 
 --contratos finalidades
 insert into contratos_finalidades(id_finalidad, descripcion) values (1, 'Vacaciones');

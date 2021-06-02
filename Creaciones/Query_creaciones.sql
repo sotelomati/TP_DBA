@@ -7,12 +7,7 @@ CREATE DOMAIN mesaño as varchar(7)
 CONSTRAINT format_check CHECK (3 = position('-' in VALUE))
 CONSTRAINT date_check CHECK ('01-01-1990' < TO_DATE('01-' || VALUE, 'DD-MM-YYYY'));
 
-
 -- Creacion de tablas
-CREATE TABLE auditoria(
-	ultimo_usuario varchar(50) NOT NULL,
-	ultimo_horario timestamp NOT NULL
-);
 
 CREATE TABLE tipo_operacion_contable(
  id_tipo_operacion  INTEGER NOT NULL PRIMARY KEY,
@@ -44,7 +39,6 @@ observaciones varchar(100),
 FOREIGN KEY (id_localidad) REFERENCES Localidades(id_localidad)
 );
 
-
 CREATE TABLE Anuncios(
 id_anuncio integer not null PRIMARY KEY,
 titulo varchar(50) not null,
@@ -67,28 +61,22 @@ monto double precision not null,
 FOREIGN KEY (id_divisa) REFERENCES Divisas(id_divisa)
 );
 
-
-
 CREATE TABLE TipoInmueble(
 id_tipo integer not null PRIMARY KEY,
 descripcion varchar(50) not null
 );
 
-
-CREATE TABLE TipoOperacion(
+CREATE TABLE operaciones(
 id_operacion integer not null PRIMARY KEY,
 descripcion varchar(50) not null
 );
-
 
 CREATE TABLE Inmuebles_Estados(
 id_estado integer not null PRIMARY KEY,
 descripcion varchar(50) not null
 );
 
-
 ------------------------------------------------------------------------------------------------------------------
-
 
 CREATE TABLE Personas (
 id_persona integer UNIQUE NOT NULL,
@@ -127,28 +115,34 @@ CONSTRAINT FK_DUEÑO_PERSONA
     ON DELETE CASCADE
 );
 
-
 ------------------------------------------------------------------------------------------------------------------
-
 
 CREATE TABLE Inmuebles(
 id_inmueble integer not null PRIMARY KEY,
 id_tipoInmueble integer not null,
-id_tipoOperacion integer not null,
 id_estado_inmueble integer not null,
 id_direccion integer not null,
 id_anuncio integer not null,
 id_precio integer not null,
 id_dueño integer not null,
+	--auditoria
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL,
 FOREIGN KEY (id_tipoInmueble) REFERENCES TipoInmueble(id_tipo),
-FOREIGN KEY (id_tipoOperacion) REFERENCES TipoOperacion(id_operacion),
 FOREIGN KEY (id_estado_inmueble) REFERENCES inmuebles_estados(id_estado),
 FOREIGN KEY (id_direccion) REFERENCES Direcciones(id_direccion),
 FOREIGN KEY (id_anuncio) REFERENCES Anuncios(id_anuncio),
 FOREIGN KEY (id_precio) REFERENCES Precios(id_precio),
 FOREIGN KEY (id_dueño) REFERENCES Dueños(id_dueño)
-)INHERITS(auditoria);
+);
 
+CREATE TABLE inmuebles_operaciones(
+id_inmueble integer NOT NULL,
+id_operacion integer NOT NULL,
+PRIMARY KEY (id_inmueble, id_operacion),
+FOREIGN KEY (id_inmueble) REFERENCES inmuebles(id_inmueble),
+FOREIGN KEY (id_operacion) REFERENCES operaciones(id_operacion)
+);
 
 CREATE TABLE PeriodoOcupacion(
 id_periodo SERIAL NOT NULL PRIMARY KEY,
@@ -179,7 +173,6 @@ vencimiento_cuota integer NOT NULL DEFAULT 10, --default dia 10 de cada mes
 id_finalidad integer NULL,
 precio_inicial double precision NOT NULL,
 
-	
 PRIMARY KEY (id_inmueble, id_cliente),
 CONSTRAINT FK_CONTRATO_INMUEBLE
   FOREIGN KEY (id_inmueble)
@@ -243,7 +236,6 @@ PRIMARY KEY (id_inmueble, id_cliente,id_precioAlquiler),
     ON DELETE CASCADE
 );
 
-
 CREATE TABLE Pagos(
 id_inmueble integer not null,
 id_cliente integer not null,
@@ -266,7 +258,6 @@ PRIMARY KEY (id_inmueble, id_cliente, mesAño),
     REFERENCES tipo_operacion_contable(id_tipo_operacion)
 );
 
-
 CREATE TABLE Cuotas(
 id_inmueble integer not null,
 id_cliente integer not null,
@@ -288,7 +279,6 @@ PRIMARY KEY (id_inmueble, id_cliente, mesAño),
   FOREIGN KEY (id_tipo_operacion)
     REFERENCES tipo_operacion_contable(id_tipo_operacion)
 );
-
 
 CREATE TABLE Recargos(
 id_inmueble integer not null,

@@ -3,7 +3,7 @@ RETURNS BOOLEAN AS
 $$
 BEGIN
 	IF NOT SP_existe_cuota(v_inmueble, v_cliente, fechaCrear) THEN
-		IF SP_esta_en_rango_contrato(inmueble, cliente, fechaCrear) THEN
+		IF SP_esta_en_rango_contrato(v_inmueble, v_cliente, fechaCrear) THEN
 			INSERT INTO public.cuotas(id_inmueble, id_cliente, "mesaño")
 			VALUES (v_inmueble, v_cliente, fechaCrear);
 			RETURN TRUE;
@@ -13,7 +13,7 @@ BEGIN
 		END IF;
 	ELSE
 		RAISE NOTICE 'La cuota para el mes año % ya existe', fechaCrear;
-		RETURN False;
+		RETURN TRUE;
 	END IF;
 END;
 $$ LANGUAGE PLPGSQL;

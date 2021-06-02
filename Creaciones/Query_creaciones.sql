@@ -248,7 +248,7 @@ CREATE TABLE Pagos(
 id_inmueble integer not null,
 id_cliente integer not null,
 mesAño mesaño not null,
-id_tipo_operacion integer NOT NULL,
+id_tipo_operacion integer NOT NULL DEFAULT 2,
 importeCuota double precision not null,
 fechaPago date not null default CURRENT_DATE,
 
@@ -270,7 +270,7 @@ PRIMARY KEY (id_inmueble, id_cliente, mesAño),
 CREATE TABLE Cuotas(
 id_inmueble integer not null,
 id_cliente integer not null,
-id_tipo_operacion integer NOT NULL,
+id_tipo_operacion integer NOT NULL DEFAULT 1,
 mesAño mesaño not null,
 importe double precision,
 fechaVencimiento date not null,
@@ -294,7 +294,7 @@ CREATE TABLE Recargos(
 id_inmueble integer not null,
 id_cliente integer not null,
 mesAño mesaño not null,
-id_tipo_operacion integer NOT NULL,
+id_tipo_operacion integer NOT NULL DEFAULT 3,
 importeRecargo double precision not null,
 diasVencidos integer default 0,
 

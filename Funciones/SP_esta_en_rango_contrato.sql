@@ -11,14 +11,14 @@ WHERE id_inmueble = v_inmueble AND id_cliente = v_cliente AND id_estado = 1;
 
 rango_superior = rango_inferior + (CAST(v_vigencia AS varchar) || ' MONTH')::interval;
 
-	IF NOT (SP_es_mayor_mesaño(v_mesaño, rangoinferior) OR SP_es_mayor_mesaño(rangosuperior, v_mesaño))
+	IF (SP_es_mayor_mesaño(v_mesaño, SP_convertir_date_mesaño(rango_inferior)) 
+		AND (SP_es_mayor_mesaño(SP_convertir_date_mesaño(rango_superior), v_mesaño) 
+			 OR SP_es_igual_mesaño(SP_convertir_date_mesaño(rango_superior), v_mesaño)))
 		THEN
-		RETURN FALSE;
-	ELSE
 		RETURN TRUE;
+	ELSE
+		RETURN FALSE;
 	END IF;
 END;
 $$ LANGUAGE PLPGSQL;
 
-select * from contratoAlquiler
-select SP_esta_en_rango_contrato(1000, 1, '05-2021')

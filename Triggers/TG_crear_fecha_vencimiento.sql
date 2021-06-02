@@ -13,7 +13,7 @@ $$
 LANGUAGE plpgsql;	
 	
 
-CREATE OR REPLACE TRIGGER TG_crear_fecha_vencimiento
+CREATE TRIGGER TG_crear_fecha_vencimiento
 BEFORE INSERT ON contratoalquiler
 FOR EACH ROW
 EXECUTE PROCEDURE SP_crear_fecha_vencimiento();

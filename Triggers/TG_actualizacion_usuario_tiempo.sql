@@ -17,6 +17,11 @@ BEFORE INSERT OR UPDATE ON inmuebles
 FOR EACH ROW
 EXECUTE PROCEDURE SP_actualizar_usuario_y_tiempo();
 
+CREATE TRIGGER TG_auditorio_modificacion
+BEFORE INSERT OR UPDATE ON direcciones
+FOR EACH ROW
+EXECUTE PROCEDURE SP_actualizar_usuario_y_tiempo();
+
 
 
 

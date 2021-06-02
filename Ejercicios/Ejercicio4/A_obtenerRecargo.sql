@@ -12,11 +12,10 @@ DECLARE diferencia_de_dias integer = 0;
 DECLARE v_fecha_vencimiento date;
 BEGIN
 --Obtengo el monto a cobrar
-select importe INTO v_monto from precioAlquiler 
+select importe INTO v_monto from cuotas 
 where id_inmueble = inmueble 
 and id_cliente = cliente
-and date_part('MONTH', age(fechaDefinicion, SP_convertir_mesaño_date(fecha_cuota))) <= 0 
-order by date_part('MONTH', age(fechaDefinicion, SP_convertir_mesaño_date(fecha_cuota))) DESC;
+and mesaño LIKE fecha_cuota;
 
 select fechaVencimiento INTO v_fecha_vencimiento from cuotas
 where id_inmueble = inmueble 
@@ -33,7 +32,6 @@ RETURN v_recargo;
 END;
 $$ 
 LANGUAGE plpgsql;
-
 
 /*
 Como Funcion?

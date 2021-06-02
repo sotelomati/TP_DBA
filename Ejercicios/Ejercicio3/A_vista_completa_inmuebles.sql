@@ -23,13 +23,13 @@ CREATE VIEW info_inmuebles_completa AS
 					THEN 'SI'
 					ELSE 'NO'
 			END  )AS SE_ALQUILA,
-			(CASE 	WHEN ((2 = (SELECT id_operacion FROM tipooperacion WHERE id_inmueble = Inmuebles.id_inmueble and id_operacion = 2))
+			(CASE 	WHEN ((2 = (SELECT id_operacion FROM inmuebles_operaciones WHERE id_inmueble = Inmuebles.id_inmueble and id_operacion = 2))
 					AND 
 					((SELECT fechaBaja FROM PeriodoOcupacion) <> NULL ))
 					THEN 'OCUPADO'
 					ELSE 'LIBRE'
 			 END) AS ESTADO_ALQUILER,
-			(CASE 	WHEN ((2 = (SELECT id_operacion FROM tipooperacion WHERE id_inmueble = Inmuebles.id_inmueble and id_operacion = 2))
+			(CASE 	WHEN ((2 = (SELECT id_operacion FROM inmuebles_operaciones WHERE id_inmueble = Inmuebles.id_inmueble and id_operacion = 2))
 					AND 
 					((SELECT fechaBaja FROM PeriodoOcupacion) <> NULL ))
 					THEN (SELECT fechaBaja FROM PeriodoOcupacion WHERE id_inmueble = Inmuebles.id_inmueble )

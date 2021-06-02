@@ -36,3 +36,5 @@ modificar cupta, pago y recargo con Default en el tipo de operacion contable
 
 Ejercicio usos:
 3_A_ select * from info_inmuebles_completa
+
+4_A_ select calcular_recargo(1000, 1, '05-2021')

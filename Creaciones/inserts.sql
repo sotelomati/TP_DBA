@@ -81,9 +81,9 @@ insert into Inmuebles(id_inmueble, id_tipoInmueble, id_estado_inmueble,
 insert into Inmuebles(id_inmueble, id_tipoInmueble, id_estado_inmueble, 
 					  id_direccion, id_anuncio, id_precio, id_dueño) 
 					  values (1003, 103, 1, 3, 3, 3, 2);
-					  select * from inmuebles
+					  
 --inmuebles operaciones
-INSERT INTO public.inmuebles_operaciones(id_inmueble, id_operacion)
+INSERT INTO inmuebles_operaciones(id_inmueble, id_operacion)
 	VALUES  (1000, 1),
 			(1002, 1),
 			(1000, 2),
@@ -103,9 +103,9 @@ insert into contratos_estados(id_estado, descripcion) values (4, 'Baja a pedido 
 
 --Contratos
 insert into ContratoAlquiler(id_inmueble, id_cliente, fechacontrato, id_estado, periodo_vigencia, vencimiento_cuota, id_finalidad, precio_inicial) 
-							 values (1000, 1, '20-05-2021', 1, 6, 44510, 2, 1500);						 
+							 values (1000, 1, '20-05-2021', 1, 6, 10, 2, 1500);						 
 insert into ContratoAlquiler(id_inmueble, id_cliente, fechacontrato, id_estado, periodo_vigencia, vencimiento_cuota, id_finalidad, precio_inicial) 
-							 values (1002, 3, '26-05-2021', 1, 6, 44510, 2, 1500);							 
+							 values (1002, 3, '26-05-2021', 1, 6, 10, 2, 1500);							 
 
 --Tipos de Garantias
 insert into TipoGarantia(id_garantia, descripcion) values (1, 'Recibo de Sueldo');
@@ -120,8 +120,7 @@ INSERT INTO public.tipo_operacion_contable(
 
 --Cuotas
 INSERT INTO public.cuotas(
-	id_inmueble, id_cliente, id_tipo_operacion, "mesaño", importe, fechavencimiento)
-	VALUES (1000, 1, 1, '05-2021', 15000, '25-05-2021');
-
-
+	id_inmueble, id_cliente, id_tipo_operacion, "mesaño")
+	VALUES (1000, 1, 1, '07-2021');
+	
 

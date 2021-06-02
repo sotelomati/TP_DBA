@@ -29,7 +29,7 @@ CREATE OR REPLACE FUNCTION SP_agregar_fecha_vencimiento()
     LANGUAGE plpgsql;
 
 CREATE TRIGGER TG_agregar_fecha_vencimiento
-    before insert or update
+    before insert
     ON cuotas
     FOR EACH ROW 
     EXECUTE PROCEDURE SP_agregar_fecha_vencimiento();

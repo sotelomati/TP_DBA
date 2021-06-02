@@ -12,7 +12,7 @@ Ejercicio 3:
 
 Ejercicio 4:
 -A Finalizado
--C Pendiente (Falta punto 2 item 3)
+-C Finalizado
 -D Pendiente
 -E Pendiente
 
@@ -33,3 +33,6 @@ problema de pago con cuota al asociar
 borrar la tabla auditoria y agregar manualmente las columnas a las tablas que haga falta
 
 modificar cupta, pago y recargo con Default en el tipo de operacion contable
+
+Ejercicio usos:
+3_A_ select * from info_inmuebles_completa

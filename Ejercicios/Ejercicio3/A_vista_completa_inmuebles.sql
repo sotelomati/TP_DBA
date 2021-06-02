@@ -15,11 +15,11 @@ CREATE VIEW info_inmuebles_completa AS
 			pre.monto ,
 			pre.acronimo,
 			per.nombreCompleto,
-			(CASE 	WHEN (1 = (SELECT id_operacion FROM tipooperacion WHERE id_inmueble = Inmuebles.id_inmueble and id_operacion = 1))
+			(CASE 	WHEN (1 = (SELECT id_operacion FROM inmuebles_operaciones WHERE id_inmueble = Inmuebles.id_inmueble and id_operacion = 1))
 					THEN 'SI'
 					ELSE 'NO'
 			END  )AS SE_VENDE,
-			(CASE 	WHEN (2 = (SELECT id_operacion FROM tipooperacion WHERE id_inmueble = Inmuebles.id_inmueble and id_operacion = 2))
+			(CASE 	WHEN (2 = (SELECT id_operacion FROM inmuebles_operaciones WHERE id_inmueble = Inmuebles.id_inmueble and id_operacion = 2))
 					THEN 'SI'
 					ELSE 'NO'
 			END  )AS SE_ALQUILA,

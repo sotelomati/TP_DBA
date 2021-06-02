@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created by yFiles for HTML 2.4-EAP-M1-->
+<graphml xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml.html/2.0/ygraphml.xsd " xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:demostyle="http://www.yworks.com/yFilesHTML/demos/FlatDemoStyle/1.0" xmlns:icon-style="http://www.yworks.com/yed-live/icon-style/1.0" xmlns:bpmn="http://www.yworks.com/xml/yfiles-bpmn/2.0" xmlns:demotablestyle="http://www.yworks.com/yFilesHTML/demos/FlatDemoTableStyle/1.0" xmlns:uml="http://www.yworks.com/yFilesHTML/demos/UMLDemoStyle/1.0" xmlns:GraphvizNodeStyle="http://www.yworks.com/yFilesHTML/graphviz-node-style/1.0" xmlns:VuejsNodeStyle="http://www.yworks.com/demos/yfiles-vuejs-node-style/1.0" xmlns:explorer-style="http://www.yworks.com/data-explorer/1.0" xmlns:y="http://www.yworks.com/xml/yfiles-common/3.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/3.0" xmlns:x0="http://www.yworks.com/yFilesHTML/demos/EntityRelationship/1.0" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:yjs="http://www.yworks.com/xml/yfiles-for-html/2.0/xaml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<key id="d0" for="node" attr.type="int" attr.name="zOrder" y:attr.uri="http://www.yworks.com/xml/yfiles-z-order/1.0/zOrder"/>
+	<key id="d1" for="node" attr.type="boolean" attr.name="Expanded" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/Expanded">
+		<default>true</default>
+	</key>
+	<key id="d2" for="node" attr.type="string" attr.name="url"/>
+	<key id="d3" for="node" attr.type="string" attr.name="description"/>
+	<key id="d4" for="node" attr.name="NodeLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeLabels"/>
+	<key id="d5" for="node" attr.name="NodeGeometry" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeGeometry"/>
+	<key id="d6" for="all" attr.name="UserTags" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/UserTags"/>
+	<key id="d7" for="node" attr.name="NodeStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeStyle"/>
+	<key id="d8" for="node" attr.name="NodeViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/NodeViewState"/>
+	<key id="d9" for="edge" attr.type="string" attr.name="url"/>
+	<key id="d10" for="edge" attr.type="string" attr.name="description"/>
+	<key id="d11" for="edge" attr.name="EdgeLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeLabels"/>
+	<key id="d12" for="edge" attr.name="EdgeGeometry" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeGeometry"/>
+	<key id="d13" for="edge" attr.name="EdgeStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeStyle"/>
+	<key id="d14" for="edge" attr.name="EdgeViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/EdgeViewState"/>
+	<key id="d15" for="port" attr.name="PortLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortLabels"/>
+	<key id="d16" for="port" attr.name="PortLocationParameter" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortLocationParameter">
+		<default>
+			<x:Static Member="y:FreeNodePortLocationModel.NodeCenterAnchored"/>
+		</default>
+	</key>
+	<key id="d17" for="port" attr.name="PortStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortStyle">
+		<default>
+			<x:Static Member="y:VoidPortStyle.Instance"/>
+		</default>
+	</key>
+	<key id="d18" for="port" attr.name="PortViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/PortViewState"/>
+	<key id="d19" attr.name="SharedData" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/SharedData"/>
+	<data key="d19">
+		<y:SharedData>
+			<yjs:SolidColorFill x:Key="1" color="#FFE8EEF7"/>
+			<yjs:SolidColorFill x:Key="2" color="#FFB7C9E3"/>
+			<yjs:Stroke x:Key="3" fill="#FFFFFFFF"/>
+			<yjs:PolylineEdgeStyle x:Key="4" stroke="{y:GraphMLReference 3}" targetArrow="{y:GraphMLReference 5}"/>
+			<yjs:Arrow x:Key="5" stroke="{y:GraphMLReference 3}" fill="#FFFFFFFF"/>
+			<yjs:Stroke x:Key="6" fill="#FFFFFFFF"/>
+		</y:SharedData>
+	</data>
+	<graph id="G" edgedefault="directed">
+		<data key="d6">
+			<y:Json>{"version":"2.0.0","bridge-style":"ARC_SCALED","theme":{"name":"dark","version":"1.0.0"}}</y:Json>
+		</data>
+		<node id="n0">
+			<data key="d0">1</data>
+			<data key="d5">
+				<y:RectD X="-201" Y="-343.5" Width="124" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Inmueble</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_inmueble. pk]]></sys:String>
+									<sys:String><![CDATA[tipoInmueble. ]]></sys:String>
+									<sys:String>tipoOperacion.</sys:String>
+									<sys:String>estado.</sys:String>
+									<sys:String><![CDATA[direccion. fk]]></sys:String>
+									<sys:String><![CDATA[anuncio. fk]]></sys:String>
+									<sys:String><![CDATA[precio. fk]]></sys:String>
+									<sys:String><![CDATA[dueño. fk]]></sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.5,0.9938650306748467"/>
+				</data>
+			</port>
+			<port name="p2"/>
+			<port name="p3"/>
+			<port name="p4">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.9920634920634921,0.5"/>
+				</data>
+			</port>
+			<port name="p5"/>
+		</node>
+		<node id="n1">
+			<data key="d0">2</data>
+			<data key="d5">
+				<y:RectD X="223" Y="-343.5" Width="110.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Localidad</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_localidad. pk]]></sys:String>
+									<sys:String><![CDATA[provincia. fk]]></sys:String>
+									<sys:String>codigoPostal.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n2">
+			<data key="d0">3</data>
+			<data key="d5">
+				<y:RectD X="421.125" Y="-343.5" Width="113.625" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Direccion</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_direccion. pk]]></sys:String>
+									<sys:String><![CDATA[localidad fk]]></sys:String>
+									<sys:String>calle.</sys:String>
+									<sys:String>numero.</sys:String>
+									<sys:String>departamento.</sys:String>
+									<sys:String>piso.</sys:String>
+									<sys:String>observaciones.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.5,0.006134969325153394"/>
+				</data>
+			</port>
+			<port name="p2">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.9913513513513513,0.5"/>
+				</data>
+			</port>
+		</node>
+		<node id="n3">
+			<data key="d0">4</data>
+			<data key="d5">
+				<y:RectD X="11" Y="-343.5" Width="124" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Localizacion</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_localizacion. pk]]></sys:String>
+									<sys:String><![CDATA[provincia. ]]></sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n4">
+			<data key="d0">5</data>
+			<data key="d5">
+				<y:RectD X="-195.8125" Y="-113.375" Width="113.625" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Anuncio</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_anuncio. pk]]></sys:String>
+									<sys:String>titulo.</sys:String>
+									<sys:String><![CDATA[ texto.]]></sys:String>
+									<sys:String><![CDATA[ fecha.]]></sys:String>
+									<sys:String><![CDATA[ vigencia.]]></sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n5">
+			<data key="d0">6</data>
+			<data key="d5">
+				<y:RectD X="-413" Y="-343.5" Width="124" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>precio</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_Precio. pk]]></sys:String>
+									<sys:String>divisa.</sys:String>
+									<sys:String>monto.</sys:String>
+									<sys:String></sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n6">
+			<data key="d0">7</data>
+			<data key="d5">
+				<y:RectD X="-406.0625" Y="-113.375" Width="110.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>PeriodoOcupacion</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_periodo. pk]]></sys:String>
+									<sys:String><![CDATA[inmueble. fk]]></sys:String>
+									<sys:String>fechaInicio.</sys:String>
+									<sys:String>fechaBaja.</sys:String>
+									<sys:String>motivoBaja.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n7">
+			<data key="d0">8</data>
+			<data key="d5">
+				<y:RectD X="36.90625" Y="-113.375" Width="110.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>ContratoAlquiler</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[inmueble. fk pk]]></sys:String>
+									<sys:String><![CDATA[cliente. fk pk]]></sys:String>
+									<sys:String><![CDATA[fecha del contrato.]]></sys:String>
+									<sys:String></sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.9910813823857303,0.5"/>
+				</data>
+			</port>
+			<port name="p2"/>
+			<port name="p3">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.5,0.9938650306748467"/>
+				</data>
+			</port>
+		</node>
+		<node id="n8">
+			<data key="d0">9</data>
+			<data key="d5">
+				<y:RectD X="223" Y="-113.375" Width="129.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Garante</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[dni. pk]]></sys:String>
+									<sys:String><![CDATA[contratoAlquiler. pk fk]]></sys:String>
+									<sys:String>nombre.</sys:String>
+									<sys:String>fechaNac.</sys:String>
+									<sys:String>tipoGarantia.</sys:String>
+									<sys:String></sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n9">
+			<data key="d0">12</data>
+			<data key="d5">
+				<y:RectD X="418.59375" Y="-113.375" Width="129.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>PrecioAlquiler</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[cliente. pk fk]]></sys:String>
+									<sys:String><![CDATA[inmueble. pk fk]]></sys:String>
+									<sys:String>importe.</sys:String>
+									<sys:String>fechaDefinicion.</sys:String>
+									<sys:String></sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n10">
+			<data key="d0">13</data>
+			<data key="d5">
+				<y:RectD X="-395.65625" Y="321.125" Width="124" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Cuota</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[cliente. fk pk]]></sys:String>
+									<sys:String><![CDATA[inmueble. fk pk]]></sys:String>
+									<sys:String><![CDATA[mesAnio. pk]]></sys:String>
+									<sys:String><![CDATA[fechaVencimiento. ]]></sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n11">
+			<data key="d0">14</data>
+			<data key="d5">
+				<y:RectD X="-190.59375" Y="321.125" Width="117.0625" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Pago</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[cliente. pk fk]]></sys:String>
+									<sys:String><![CDATA[inmueble. pk fk]]></sys:String>
+									<sys:String><![CDATA[mesAnio. pk]]></sys:String>
+									<sys:String>importeCuota.</sys:String>
+									<sys:String>fechaPago.</sys:String>
+									<sys:String></sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.008398950131233596,0.5"/>
+				</data>
+			</port>
+			<port name="p2"/>
+		</node>
+		<node id="n12">
+			<data key="d0">16</data>
+			<data key="d5">
+				<y:RectD X="14.46875" Y="321.125" Width="110.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Recargo</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[cliente. fk pk]]></sys:String>
+									<sys:String><![CDATA[inmueble. pk fk]]></sys:String>
+									<sys:String><![CDATA[mesAnio. pk]]></sys:String>
+									<sys:String>importeRecargo.</sys:String>
+									<sys:String>diasVencido.</sys:String>
+									<sys:String></sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n13">
+			<data key="d0">17</data>
+			<data key="d5">
+				<y:RectD X="428.09375" Y="214.375" Width="110.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Persona</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[codigoPersona. pk]]></sys:String>
+									<sys:String>dni.</sys:String>
+									<sys:String>fechaNacimiento.</sys:String>
+									<sys:String>fechaInscripcion.</sys:String>
+									<sys:String>nombreCompleto.</sys:String>
+									<sys:String><![CDATA[direccion. fk]]></sys:String>
+									<sys:String></sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.008918617614269764,0.5"/>
+				</data>
+			</port>
+			<port name="p2"/>
+		</node>
+		<node id="n14">
+			<data key="d0">18</data>
+			<data key="d5">
+				<y:RectD X="633.125" Y="214.375" Width="110.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Dueño</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[codigoPersona fk pk]]></sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n15">
+			<data key="d0">19</data>
+			<data key="d5">
+				<y:RectD X="-187.125" Y="116.75" Width="110.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Cliente</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[codigoPersona fk pk]]></sys:String>
+									<sys:String></sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+			<port name="p2">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.5,0.9938650306748467"/>
+				</data>
+			</port>
+		</node>
+		<edge id="e0" source="n2" target="n1" sourceport="p0" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e1" source="n1" target="n3" sourceport="p1" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e2" source="n0" target="n2" sourceport="p0" targetport="p1">
+			<data key="d12">
+				<x:List>
+					<y:Bend Location="-139,-417.125"/>
+					<y:Bend Location="477.9375,-417.125"/>
+				</x:List>
+			</data>
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e3" source="n4" target="n0" sourceport="p0" targetport="p1">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e4" source="n5" target="n0" sourceport="p0" targetport="p2">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e5" source="n6" target="n0" sourceport="p0" targetport="p3">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e6" source="n7" target="n0" sourceport="p0" targetport="p4">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e7" source="n8" target="n7" sourceport="p0" targetport="p1">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e8" source="n9" target="n7" sourceport="p0" targetport="p3">
+			<data key="d12">
+				<x:List>
+					<y:Bend Location="483.15625,127.875"/>
+					<y:Bend Location="91.96875,127.875"/>
+				</x:List>
+			</data>
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e9" source="n12" target="n11" sourceport="p0" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e10" source="n10" target="n11" sourceport="p0" targetport="p1">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e11" source="n15" target="n13" sourceport="p0" targetport="p0">
+			<data key="d12">
+				<x:List>
+					<y:Bend Location="-97,226.375"/>
+				</x:List>
+			</data>
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e12" source="n14" target="n13" sourceport="p0" targetport="p1">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e13" source="n7" target="n15" sourceport="p2" targetport="p1">
+			<data key="d12">
+				<x:List>
+					<y:Bend Location="106.515625,10.75"/>
+					<y:Bend Location="39.5,45.75"/>
+				</x:List>
+			</data>
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e14" source="n0" target="n14" sourceport="p5" targetport="p1">
+			<data key="d12">
+				<x:List>
+					<y:Bend Location="-139,-454.5"/>
+					<y:Bend Location="679,-454.5"/>
+					<y:Bend Location="679,226.37499999999997"/>
+				</x:List>
+			</data>
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e15" source="n11" target="n15" sourceport="p2" targetport="p2">
+			<data key="d13">
+				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 3}" targetArrow="{y:GraphMLReference 5}"/>
+			</data>
+		</edge>
+		<edge id="e16" source="n13" target="n2" sourceport="p2" targetport="p2">
+			<data key="d12">
+				<x:List>
+					<y:Bend Location="599.75,215.3627300613497"/>
+					<y:Bend Location="599.75,-263"/>
+				</x:List>
+			</data>
+			<data key="d13">
+				<yjs:PolylineEdgeStyle stroke="{y:GraphMLReference 6}">
+					<yjs:PolylineEdgeStyle.targetArrow>
+						<yjs:Arrow stroke="{y:GraphMLReference 6}" fill="#FFFFFFFF"/>
+					</yjs:PolylineEdgeStyle.targetArrow>
+				</yjs:PolylineEdgeStyle>
+			</data>
+		</edge>
+	</graph>
+</graphml>

@@ -5,8 +5,8 @@ $$
 DECLARE v_importe double precision = 0;
 BEGIN
 	select importe INTO v_importe from precioAlquiler 
-	where id_inmueble =1000
-	and id_cliente = 1
+	where id_inmueble =  v_inmueble
+	and id_cliente = v_cliente
 	and SP_es_mayor_mesaño(fechaContable, SP_convertir_date_mesaño(fechaDefinicion)) 
 	order by fechadefinicion DESC
 	LIMIT 1;

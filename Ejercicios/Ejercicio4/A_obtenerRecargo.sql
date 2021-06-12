@@ -6,7 +6,7 @@ CREATE OR REPLACE FUNCTION calcular_recargo(inmueble integer, cliente integer, f
 RETURNS double precision AS
 $$ 
 DECLARE v_recargo double precision = 0;
-DECLARE v_monto precios.monto%TYPE;
+DECLARE v_monto cuotas.importe%TYPE;
 DECLARE porcentaje_recargo double precision = 0.01;
 DECLARE diferencia_de_dias integer = 0;
 DECLARE v_fecha_vencimiento date;

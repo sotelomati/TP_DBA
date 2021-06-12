@@ -10,7 +10,7 @@ BEGIN
 	WHERE id_inmueble = v_inmueble AND id_cliente = v_cliente AND id_estado = 1;
 	
 	v_rango_superior = v_rango_inferior + (CAST(v_vigencia AS varchar) || ' MONTH')::interval;
-	raise notice 'error %', v_rango_superior;
+
 	IF   (SP_esta_en_rango_contrato(v_inmueble, v_cliente, sp_operacion_suma_mes_año
 		(SP_convertir_date_mesaño(v_rango_inferior), mes))) 
 	THEN

@@ -3,6 +3,10 @@
 CREATE DOMAIN dni as varchar(8)
 CONSTRAINT dni_check CHECK (CAST(VALUE as INTEGER) <= 99999999);
 
+CREATE DOMAIN cuit as varchar(13)
+CONSTRAINT cuit_check CHECK (CAST(VALUE as BIGINT) <= 99999999999);
+
+
 CREATE DOMAIN mesaño as varchar(7)
 CONSTRAINT format_check CHECK (3 = position('-' in VALUE))
 CONSTRAINT date_check CHECK ('01-01-1990' < TO_DATE('01-' || VALUE, 'DD-MM-YYYY'));
@@ -366,3 +370,14 @@ REFERENCES tipo_operacion_contable(id_tipo_operacion)
 );
 
 
+-----------------------------------------------------------------------
+
+CREATE TABLE EMPLEADOS(
+cuit cuit NOT NULL Primary KEY,
+apellido_nombre varchar(70) NULL,
+fecha_ingreso date NOT NULL,
+cargo varchar(15) NOT NULL,
+superior cuit NULL,
+
+FOREIGN KEY (superior) REFERENCES EMPLEADOS(cuit)
+);

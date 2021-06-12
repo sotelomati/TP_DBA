@@ -13,7 +13,7 @@ Ejercicio 3:
 Ejercicio 4:
 -A Finalizado
 -C Finalizado
--D Pendiente
+-D Finalizado
 -E Pendiente
 
 Ejercicio 5:
@@ -26,15 +26,3 @@ Ejercicio 5:
 
 problemas con ejercicio 4_c
 	no funcioa la funcion de check
-
-problema conceptual en tabla de contrato alquiler
-problema de pago con cuota al asociar
-
-borrar la tabla auditoria y agregar manualmente las columnas a las tablas que haga falta
-
-modificar cupta, pago y recargo con Default en el tipo de operacion contable
-
-Ejercicio usos:
-3_A_ select * from info_inmuebles_completa
-
-4_A_ select calcular_recargo(1000, 1, '05-2021')

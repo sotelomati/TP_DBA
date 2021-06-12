@@ -10,14 +10,18 @@ CONSTRAINT date_check CHECK ('01-01-1990' < TO_DATE('01-' || VALUE, 'DD-MM-YYYY'
 -- Creacion de tablas
 
 CREATE TABLE tipo_operacion_contable(
- id_tipo_operacion  INTEGER NOT NULL PRIMARY KEY,
- descripcion varchar(50),
- debito boolean -- true:debito, false:credito
+id_tipo_operacion  INTEGER NOT NULL PRIMARY KEY,
+descripcion varchar(50),
+debito boolean, -- true:debito, false:credito
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL
 );
 
 CREATE TABLE Localizaciones(
 id_localizacion integer not null PRIMARY KEY,
-provincia varchar(50) not null
+provincia varchar(50) not null,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL
 );
 
 CREATE TABLE Localidades(
@@ -25,6 +29,8 @@ id_localidad integer not null PRIMARY KEY,
 nombre varchar(50) NOT NULL,
 codigo_postal integer null,
 id_provincia integer not null,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL,
 FOREIGN KEY (id_provincia) REFERENCES Localizaciones(id_localizacion)
 );
 
@@ -36,6 +42,8 @@ numero integer not null,
 departamento varchar(10),
 piso integer,
 observaciones varchar(100),
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL,
 FOREIGN KEY (id_localidad) REFERENCES Localidades(id_localidad)
 );
 DROP TABLE Historial_Direcciones
@@ -62,35 +70,47 @@ titulo varchar(50) not null,
 texto varchar(100) not null,
 fecha date not null,
 vigencia integer not null,
-tipo_vigencia char not null -- A = Año, M = Mes, D = Dias
+tipo_vigencia char not null, -- A = Año, M = Mes, D = Dias
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL
 );
 
 CREATE TABLE Divisas(
 id_divisa integer not null PRIMARY KEY,
 acronimo varchar(3) not null,
-descripcion varchar(50) not null
+descripcion varchar(50) not null,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL
 );
 
 CREATE TABLE Precios(
 id_precio integer not null PRIMARY KEY,
 id_divisa integer not null,
 monto double precision not null,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL,
 FOREIGN KEY (id_divisa) REFERENCES Divisas(id_divisa)
 );
 
 CREATE TABLE TipoInmueble(
 id_tipo integer not null PRIMARY KEY,
-descripcion varchar(50) not null
+descripcion varchar(50) not null,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL
 );
 
 CREATE TABLE operaciones(
 id_operacion integer not null PRIMARY KEY,
-descripcion varchar(50) not null
+descripcion varchar(50) not null,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL
 );
 
 CREATE TABLE Inmuebles_Estados(
 id_estado integer not null PRIMARY KEY,
-descripcion varchar(50) not null
+descripcion varchar(50) not null,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL
 );
 
 ------------------------------------------------------------------------------------------------------------------
@@ -102,6 +122,8 @@ fechaNacimiento date,
 fechaInscripcion date,
 nombreCompleto varchar(50),
 id_direccion integer,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL,
 
 PRIMARY KEY(id_persona),
 CONSTRAINT FK_DIRECCION
@@ -112,6 +134,8 @@ CONSTRAINT FK_DIRECCION
 CREATE TABLE Clientes(
 id_cliente integer unique NOT NULL,
 id_persona integer NOT NULL,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL,
 	
 PRIMARY KEY (id_cliente, id_persona),
 CONSTRAINT FK_CLIENTE_PERSONA
@@ -124,6 +148,8 @@ CONSTRAINT FK_CLIENTE_PERSONA
 CREATE TABLE Dueños(
 id_dueño integer unique NOT NULL,
 id_persona integer NOT NULL,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL,
 
 PRIMARY KEY (id_dueño, id_persona),
 CONSTRAINT FK_DUEÑO_PERSONA
@@ -156,6 +182,8 @@ FOREIGN KEY (id_dueño) REFERENCES Dueños(id_dueño)
 CREATE TABLE inmuebles_operaciones(
 id_inmueble integer NOT NULL,
 id_operacion integer NOT NULL,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL,
 PRIMARY KEY (id_inmueble, id_operacion),
 FOREIGN KEY (id_inmueble) REFERENCES inmuebles(id_inmueble),
 FOREIGN KEY (id_operacion) REFERENCES operaciones(id_operacion)
@@ -167,17 +195,23 @@ id_inmueble integer NOT NULL,
 fechaInicio date NOT NULL,
 fechaBaja date NULL,
 motivoBaja varchar(100) NULL,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL,
 FOREIGN KEY (id_inmueble) REFERENCES Inmuebles(id_inmueble)
 );
 
 CREATE TABLE contratos_finalidades(
 id_finalidad integer NOT NULL PRIMARY KEY,
-descripcion varchar(50) NOT NULL
+descripcion varchar(50) NOT NULL,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL
 );
 
 CREATE TABLE contratos_estados(
 id_estado integer NOT NULL PRIMARY KEY,
-descripcion varchar(50)
+descripcion varchar(50),
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL
 );
 
 CREATE TABLE ContratoAlquiler(
@@ -189,6 +223,8 @@ periodo_vigencia integer NOT NULL,--seran meses
 vencimiento_cuota integer NOT NULL DEFAULT 10, --default dia 10 de cada mes
 id_finalidad integer NULL,
 precio_inicial double precision NOT NULL,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL,
 
 PRIMARY KEY (id_inmueble, id_cliente),
 CONSTRAINT FK_CONTRATO_INMUEBLE
@@ -217,6 +253,8 @@ id_cliente integer not null,
 nombre varchar(50) not null,
 fechaNacimiento date not null,
 id_tipoGarantia integer not null,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL,
 
 PRIMARY KEY (id_inmueble, id_cliente, dni),
 CONSTRAINT FK_GARANTE_INMUEBLE
@@ -241,6 +279,8 @@ id_inmueble integer not null,
 id_cliente integer not null,
 importe double precision not null,
 fechaDefinicion date not null,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL,
 
 PRIMARY KEY (id_inmueble, id_cliente,id_precioAlquiler),
 
@@ -258,8 +298,10 @@ id_inmueble integer not null,
 id_cliente integer not null,
 mesAño mesaño not null,
 id_tipo_operacion integer NOT NULL DEFAULT 2,
-importeCuota double precision not null,
+importePago double precision not null,
 fechaPago date not null default CURRENT_DATE,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL,
 
 PRIMARY KEY (id_inmueble, id_cliente, mesAño),
 
@@ -282,6 +324,8 @@ id_tipo_operacion integer NOT NULL DEFAULT 1,
 mesAño mesaño not null,
 importe double precision,
 fechaVencimiento date not null,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL,
 
 PRIMARY KEY (id_inmueble, id_cliente, mesAño),
 
@@ -304,6 +348,8 @@ mesAño mesaño not null,
 id_tipo_operacion integer NOT NULL DEFAULT 3,
 importeRecargo double precision not null,
 diasVencidos integer default 0,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL,
 
 PRIMARY KEY (id_inmueble, id_cliente, mesAño),
 

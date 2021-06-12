@@ -3,8 +3,8 @@ RETURNS BOOLEAN AS
 $$
 BEGIN
 	IF EXISTS (SELECT * from CUOTAS
-			  WHERE inmueble = v_inmueble
-			  AND cliente = v_cliente
+			  WHERE id_inmueble = v_inmueble
+			  AND id_cliente = v_cliente
 			  AND mesaño = v_mesaño)
 	THEN RETURN TRUE;
 	END IF;

@@ -50,23 +50,6 @@ ultimo_usuario varchar(50) NOT NULL,
 ultimo_horario timestamp NOT NULL,
 FOREIGN KEY (id_localidad) REFERENCES Localidades(id_localidad)
 );
-DROP TABLE Historial_Direcciones
-CREATE TABLE Historial_Direcciones(
-id_historial SERIAL NOT NULL PRIMARY KEY,
-id_dueño integer,
-id_direccion integer not null ,
-id_localidad integer not null,
-calle varchar(50) not null,
-numero integer not null,
-departamento varchar(10),
-piso integer,
-observaciones varchar(100),
-fechaInicioVigencia date,
-fechaFinVigencia date NULL,
-FOREIGN KEY (id_dueño) REFERENCES dueños(id_dueño),
-FOREIGN KEY (id_localidad) REFERENCES Localidades(id_localidad)
-);
-
 
 CREATE TABLE Anuncios(
 id_anuncio integer not null PRIMARY KEY,
@@ -162,6 +145,21 @@ CONSTRAINT FK_DUEÑO_PERSONA
     ON DELETE CASCADE
 );
 
+CREATE TABLE Historial_Direcciones(
+id_historial SERIAL NOT NULL PRIMARY KEY,
+id_dueño integer,
+id_direccion integer not null ,
+id_localidad integer not null,
+calle varchar(50) not null,
+numero integer not null,
+departamento varchar(10),
+piso integer,
+observaciones varchar(100),
+fechaInicioVigencia date,
+fechaFinVigencia date NULL,
+FOREIGN KEY (id_dueño) REFERENCES dueños(id_dueño),
+FOREIGN KEY (id_localidad) REFERENCES Localidades(id_localidad)
+);
 ------------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE Inmuebles(
@@ -247,7 +245,9 @@ FOREIGN KEY (id_estado) REFERENCES contratos_estados(id_estado)
 
 CREATE TABLE TipoGarantia(
 id_garantia integer not null PRIMARY KEY,
-descripcion varchar(50) not null
+descripcion varchar(50) not null,
+ultimo_usuario varchar(50) NOT NULL,
+ultimo_horario timestamp NOT NULL
 );
 
 CREATE TABLE Garante(

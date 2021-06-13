@@ -118,9 +118,5 @@ INSERT INTO public.tipo_operacion_contable(
 	(2,'Pago', False),
 	(3, 'Recargo',True);
 
---Cuotas
-INSERT INTO public.cuotas(
-	id_inmueble, id_cliente, id_tipo_operacion, "mesaño")
-	VALUES (1000, 1, 1, '07-2021');
-	
+
 

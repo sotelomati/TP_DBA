@@ -22,7 +22,7 @@ where id_inmueble = inmueble
 and id_cliente = cliente
 and mesaño LIKE fecha_cuota;
 
-diferencia_de_dias = date_part('DAY', age(current_date, v_fecha_vencimiento));
+diferencia_de_dias = current_date - v_fecha_vencimiento;
 IF  diferencia_de_dias > 0 THEN
 	v_recargo = diferencia_de_dias * (v_monto * porcentaje_recargo);
 	

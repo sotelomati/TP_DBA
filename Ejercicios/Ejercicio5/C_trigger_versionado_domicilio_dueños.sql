@@ -14,7 +14,7 @@ $$
             (
                 select v_nuevo_id_historial,NEW.id_dueño,
                 direcciones.id_direccion, id_localidad, calle, 
-                numero, departamento, piso, observaciones, CURRENT_DATE, NULL
+                numero, departamento, piso, observaciones, CURRENT_DATE, NULL, CURRENT_USER
                 FROM direcciones
                 INNER JOIN Personas on personas.id_direccion = direcciones.id_direccion
                 WHERE personas.id_persona = new.id_persona

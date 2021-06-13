@@ -9,7 +9,6 @@ Ejercicio 3:
 -B Finalizado
 -C Finalizado
 
-
 Ejercicio 4:
 -A Finalizado
 -C Finalizado
@@ -19,10 +18,13 @@ Ejercicio 4:
 Ejercicio 5:
 -A Finalizado
 -B Finalizado
--C Pendiente
+-C Finalizado
 -D Finalizado
 -E Finalizado
 
 
-problemas con ejercicio 4_c
-	no funcioa la funcion de check
+ejercicio 4
+	parece funcionar todo #raro
+
+AGREGAR 
+	Validacion en insert de contrato que no pise un contrato que esta abierto

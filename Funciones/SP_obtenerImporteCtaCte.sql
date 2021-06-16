@@ -18,7 +18,7 @@ IF operacion = 1 THEN
 	select id_tipo_operacion INTO tipo_operacion FROM cuotas;
 	
 ELSEIF operacion = 2 THEN
-	select importeCuota INTO resultado from pagos
+	select importePago INTO resultado from pagos
 	where id_inmueble = inmueble AND id_cliente = cliente AND mesaño LIKE mes_año;
 	select id_tipo_operacion INTO tipo_operacion FROM pagos;
 	
@@ -28,7 +28,7 @@ ELSEIF operacion = 3 THEN
 	select id_tipo_operacion INTO tipo_operacion FROM recargos;
 END IF;
 
-IF tipo_operacion = 1 THEN
+IF tipo_operacion = 1 OR tipo_operacion = 3 THEN
 	--Es Debito
 	resultado = resultado * -1;
 END IF;

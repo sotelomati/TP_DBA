@@ -1,0 +1,17 @@
+CREATE OR REPLACE FUNCTION SP_mi_propio_jefe()
+RETURNS TRIGGER AS
+$$
+BEGIN
+	IF NEW.CUIT = NEW.superior THEN
+		RAISE NOTICE 'No puedes ser tu propio jefe en esta piramide';
+		RETURN NULL;
+	END IF;
+	
+	RETURN NEW;
+END;
+$$ LANGUAGE PLPGSQL;
+
+CREATE TRIGGER TG_mi_propio_jefe
+BEFORE INSERT OR UPDATE ON empleados
+FOR EACH ROW
+EXECUTE PROCEDURE SP_mi_propio_jefe();

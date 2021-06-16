@@ -4,7 +4,7 @@ as $$
     e record;
     e2 record;
     BEGIN
-        for e in select emp.cuit, emp.apellido_nombre,emp.fecha_ingreso, emp.cargo, emp.superior as depende
+        for e in select emp.cuit, emp.apellido_nombre, emp.fecha_ingreso, emp.cargo, emp.superior as depende
                 from empleados as emp
                 where emp.superior = $1
             LOOP

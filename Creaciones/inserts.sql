@@ -119,4 +119,11 @@ INSERT INTO public.tipo_operacion_contable(
 	(3, 'Recargo',True);
 
 
-
+--Empleados
+INSERT INTO public.empleados(
+	cuit, apellido_nombre, fecha_ingreso, cargo, superior)
+	VALUES (20111111112, 'Juan Perez', CURRENT_DATE, 'Barredor', NULL),
+	(20222222222, 'Atilio Modenitti', CURRENT_DATE, 'Panadero', 20111111112),
+	(20333333332, 'Juan K', CURRENT_DATE, 'fichaje', 20222222222),
+	(20444444442, 'Juan Peres', CURRENT_DATE, 'Barredor', 20333333332),
+	(20411542492, 'Matias Sotelo', CURRENT_DATE, 'Limpia mueble', 20333333332);

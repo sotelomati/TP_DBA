@@ -377,7 +377,7 @@ CREATE TABLE EMPLEADOS(
 cuit cuit NOT NULL Primary KEY,
 apellido_nombre varchar(70) NULL,
 fecha_ingreso date NOT NULL,
-cargo varchar(15) NOT NULL,
+cargo varchar(150) NOT NULL,
 superior cuit NULL,
 
 FOREIGN KEY (superior) REFERENCES EMPLEADOS(cuit)

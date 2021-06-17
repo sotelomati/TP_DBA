@@ -9,7 +9,7 @@ as $$
                 where emp.superior = $1
             LOOP
                     for e2 in select cuit,apellido_nombre,fecha_ingreso, cargo, depende 
-                        from empleados_dependientes(e.cuit) as (cuit cuit, apellido_nombre varchar(70),fecha_ingreso date, cargo varchar(15), depende cuit)
+                        from empleados_dependientes(e.cuit) as (cuit cuit, apellido_nombre varchar(70),fecha_ingreso date, cargo varchar(150), depende cuit)
                         LOOP
                             return next e2;
                         end LOOP;
@@ -21,8 +21,8 @@ as $$
 LANGUAGE plpgsql;
 
 --Ejemplo de consulta de la funcion 
-	select * from empleados_dependientes('23385703139') 
-	as (cuit cuit, apellido_nombre varchar(70),fecha_ingreso date, cargo varchar(15), depende cuit)
+	select * from empleados_dependientes('20111111112') 
+	as (cuit cuit, apellido_nombre varchar(70),fecha_ingreso date, cargo varchar(150), depende cuit)
 	order by depende
 
 

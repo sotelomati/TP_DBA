@@ -122,8 +122,56 @@ INSERT INTO public.tipo_operacion_contable(
 --Empleados
 INSERT INTO public.empleados(
 	cuit, apellido_nombre, fecha_ingreso, cargo, superior)
-	VALUES (20111111112, 'Juan Perez', CURRENT_DATE, 'Barredor', NULL),
-	(20222222222, 'Atilio Modenitti', CURRENT_DATE, 'Panadero', 20111111112),
-	(20333333332, 'Juan K', CURRENT_DATE, 'fichaje', 20222222222),
-	(20444444442, 'Juan Peres', CURRENT_DATE, 'Barredor', 20333333332),
-	(20411542492, 'Matias Sotelo', CURRENT_DATE, 'Limpia mueble', 20333333332);
+	VALUES 
+	-- primer nivel
+	(20111111112, 'Fernando Sato', CURRENT_DATE, 'Generente general', NULL),
+	-- segundo nivel
+	(20222222222, 'Sebastian Trossero', CURRENT_DATE, 'Profesor', 20111111112),
+	(20333333332, 'Emanuel Orzuza', CURRENT_DATE, 'Profesor', 20111111112),
+	-- tercer nivel
+	(20385703132, 'Juan Gresnter', CURRENT_DATE, 'fichaje', 20222222222),
+	(20444444442, 'Atilio Modenutti', CURRENT_DATE, 'Barredor', 20222222222),
+	(20411542492, 'Matias Sotelo', CURRENT_DATE, 'Limpia mueble', 20333333332),
+
+	--cuarto nivel
+	(20390102222, 'Flavia Crolla', CURRENT_DATE, 'Barrendera', 20385703132),
+	(58972310265, 'Gaston schonfeld', CURRENT_DATE, 'Limpia mueble', 20411542492),
+	(99759067340, 'Matias Gotte', CURRENT_DATE, 'Limpia mueble', 20444444442),
+
+	--quinto nivel
+	(39640389819,'Fry, Emma M.','20-04-21','Media Relations',20390102222),
+	(45734795607,'Key, Nathan L.','02-10-20','Advertising',20390102222),
+	(27314651558,'Weiss, Joy S.','11-05-21','Quality Assurance',20390102222),
+	(41125784684,'Le, Noble I.','07-01-22','Finances',20390102222),
+	(97364273555,'Davis, Josephine O.','07-10-20','Finances',20390102222),
+	(64768973192,'Santos, Troy T.','14-08-20','Customer Service',20390102222),
+	(89989994799,'Aguirre, Jared S.','22-07-21','Payroll',20390102222),
+
+	(94797992868,'Greer, Lavinia F.','17-01-21','Human Resources',58972310265),
+	(59346741449,'Gaines, Xander S.','15-02-21','Media Relations',58972310265),
+	(21147457876,'Boone, Rylee O.','25-07-20','Human Resources',58972310265),
+	(75585928184,'Albert, Garrison Y.','24-07-21','Media Relations',58972310265),
+	(52074878966,'Mccoy, Dai A.','17-08-20','Customer Service',58972310265),
+	(96523788954,'Decker, Myra V.','03-05-21','Human Resources',58972310265),
+	(35677116907,'Vaughn, Wanda J.','01-02-21','Accounting',58972310265),
+	(33768128341,'Cooke, Aiko M.','04-01-21','Finances',58972310265),
+	(14585253639,'Griffith, Ashton E.','10-01-22','Finances',58972310265),
+	
+	(59879378607,'Nguyen, Aubrey D.','15-06-21','Media Relations',99759067340),
+	(83937642118,'Warner, Leandra M.','23-07-21','Human Resources',99759067340),
+	(65174879303,'Bowers, Tanisha X.','07-04-22','Public Relations',99759067340),
+	(55488439648,'Whitehead, Quinn V.','20-03-22','Sales and Marketing',99759067340),
+	(62936329691,'Michael, Bianca G.','28-01-21','Research and Development',99759067340),
+	(96391800095,'Dodson, Shannon E.','04-05-22','Legal Department',99759067340),
+	(33792977911,'Turner, Elmo W.','15-12-20','Public Relations',99759067340),
+	(61011538605,'Keller, Justin A.','12-07-20','Sales and Marketing',99759067340),
+	(87517625556,'Avery, Aurelia A.','04-12-20','Customer Service',99759067340),
+	(11369876835,'Malone, Hilel L.','13-01-22','Tech Support',99759067340),
+	(27574034512,'Tucker, Kennan C.','12-10-21','Accounting',99759067340);
+
+
+
+
+
+
+

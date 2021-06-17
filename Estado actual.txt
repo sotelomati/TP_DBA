@@ -1,9 +1,3 @@
-En la b
-
-Ejercicio 1 Finalizado, faltan modificaciones
-
-Ejercicio 2 Finalizado, faltan modificaciones
-
 Ejercicio 3:
 -A Finalizado
 -B Finalizado
@@ -13,7 +7,7 @@ Ejercicio 4:
 -A Finalizado
 -C Finalizado
 -D Finalizado
--E Pendiente
+-E Finalizado
 
 Ejercicio 5:
 -A Finalizado
@@ -22,9 +16,5 @@ Ejercicio 5:
 -D Finalizado
 -E Finalizado
 
-
-ejercicio 4
-	parece funcionar todo #raro
-
-AGREGAR 
-	Validacion en insert de contrato que no pise un contrato que esta abierto
+Falta crear base de datos de 0 y realizar pruebas generales
+hacer DUMP y enviar

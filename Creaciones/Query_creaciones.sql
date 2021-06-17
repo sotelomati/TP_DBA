@@ -157,7 +157,7 @@ piso integer,
 observaciones varchar(100),
 fechaInicioVigencia date,
 fechaFinVigencia date NULL,
-usuario_modificacion varchar(50)
+usuario_modificacion varchar(50),
 FOREIGN KEY (id_dueño) REFERENCES dueños(id_dueño),
 FOREIGN KEY (id_localidad) REFERENCES Localidades(id_localidad)
 );

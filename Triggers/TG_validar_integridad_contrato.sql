@@ -3,8 +3,8 @@ RETURNS TRIGGER AS
 $$
 BEGIN
 	
-	IF NOT EXISTS Select * from contratoAlquiler 
-				  where id_inmueble= NEW.idinmueble AND id_estado = 1 
+	IF NOT EXISTS (Select * from contratoAlquiler 
+				  where id_inmueble= NEW.idinmueble AND id_estado = 1)
 	THEN
 		RETURN NEW;
 	END IF;

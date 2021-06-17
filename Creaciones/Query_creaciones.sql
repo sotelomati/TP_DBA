@@ -226,6 +226,8 @@ periodo_vigencia integer NOT NULL,--seran meses
 vencimiento_cuota integer NOT NULL DEFAULT 10, --default dia 10 de cada mes
 id_finalidad integer NULL,
 precio_inicial double precision NOT NULL,
+periodicidad_aumento integer DEFAULT 6,
+porcentaje_aumento_periodicidad double precision DEFAULT 0.1,
 ultimo_usuario varchar(50) NOT NULL,
 ultimo_horario timestamp NOT NULL,
 

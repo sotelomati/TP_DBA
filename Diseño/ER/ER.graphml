@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created by yFiles for HTML 2.4-EAP5-->
+<graphml xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml.html/2.0/ygraphml.xsd " xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:demostyle="http://www.yworks.com/yFilesHTML/demos/FlatDemoStyle/1.0" xmlns:icon-style="http://www.yworks.com/yed-live/icon-style/1.0" xmlns:bpmn="http://www.yworks.com/xml/yfiles-bpmn/2.0" xmlns:demotablestyle="http://www.yworks.com/yFilesHTML/demos/FlatDemoTableStyle/1.0" xmlns:uml="http://www.yworks.com/yFilesHTML/demos/UMLDemoStyle/1.0" xmlns:GraphvizNodeStyle="http://www.yworks.com/yFilesHTML/graphviz-node-style/1.0" xmlns:VuejsNodeStyle="http://www.yworks.com/demos/yfiles-vuejs-node-style/1.0" xmlns:explorer-style="http://www.yworks.com/data-explorer/1.0" xmlns:y="http://www.yworks.com/xml/yfiles-common/3.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/3.0" xmlns:x0="http://www.yworks.com/yFilesHTML/demos/EntityRelationship/1.0" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:yjs="http://www.yworks.com/xml/yfiles-for-html/2.0/xaml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<key id="d0" for="node" attr.type="int" attr.name="zOrder" y:attr.uri="http://www.yworks.com/xml/yfiles-z-order/1.0/zOrder"/>
+	<key id="d1" for="node" attr.type="boolean" attr.name="Expanded" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/Expanded">
+		<default>true</default>
+	</key>
+	<key id="d2" for="node" attr.type="string" attr.name="url"/>
+	<key id="d3" for="node" attr.type="string" attr.name="description"/>
+	<key id="d4" for="node" attr.name="NodeLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeLabels"/>
+	<key id="d5" for="node" attr.name="NodeGeometry" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeGeometry"/>
+	<key id="d6" for="all" attr.name="UserTags" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/UserTags"/>
+	<key id="d7" for="node" attr.name="NodeStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeStyle"/>
+	<key id="d8" for="node" attr.name="NodeViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/NodeViewState"/>
+	<key id="d9" for="edge" attr.type="string" attr.name="url"/>
+	<key id="d10" for="edge" attr.type="string" attr.name="description"/>
+	<key id="d11" for="edge" attr.name="EdgeLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeLabels"/>
+	<key id="d12" for="edge" attr.name="EdgeGeometry" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeGeometry"/>
+	<key id="d13" for="edge" attr.name="EdgeStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeStyle"/>
+	<key id="d14" for="edge" attr.name="EdgeViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/EdgeViewState"/>
+	<key id="d15" for="port" attr.name="PortLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortLabels"/>
+	<key id="d16" for="port" attr.name="PortLocationParameter" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortLocationParameter">
+		<default>
+			<x:Static Member="y:FreeNodePortLocationModel.NodeCenterAnchored"/>
+		</default>
+	</key>
+	<key id="d17" for="port" attr.name="PortStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortStyle">
+		<default>
+			<x:Static Member="y:VoidPortStyle.Instance"/>
+		</default>
+	</key>
+	<key id="d18" for="port" attr.name="PortViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/PortViewState"/>
+	<key id="d19" attr.name="SharedData" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/SharedData"/>
+	<data key="d19">
+		<y:SharedData>
+			<yjs:SolidColorFill x:Key="1" color="#FFE8EEF7"/>
+			<yjs:SolidColorFill x:Key="2" color="#FFB7C9E3"/>
+			<yjs:Stroke x:Key="3" fill="#FFFFFFFF"/>
+			<yjs:PolylineEdgeStyle x:Key="4" stroke="{y:GraphMLReference 3}" targetArrow="{y:GraphMLReference 5}"/>
+			<yjs:Arrow x:Key="5" stroke="{y:GraphMLReference 3}" fill="#FFFFFFFF"/>
+			<yjs:PolylineEdgeStyle x:Key="6" stroke="{y:GraphMLReference 3}" targetArrow="{y:GraphMLReference 5}"/>
+		</y:SharedData>
+	</data>
+	<graph id="G" edgedefault="directed">
+		<data key="d6">
+			<y:Json>{"version":"2.0.0","bridge-style":"ARC_SCALED","theme":{"name":"dark","version":"1.0.0"}}</y:Json>
+		</data>
+		<node id="n0">
+			<data key="d0">21</data>
+			<data key="d5">
+				<y:RectD X="-2775.25" Y="183.3125" Width="119.6875" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>empleados</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[cuit. pk]]></sys:String>
+									<sys:String>apellido_nombre.</sys:String>
+									<sys:String>fecha_ingreso.</sys:String>
+									<sys:String>cargo.</sys:String>
+									<sys:String><![CDATA[superior. fk]]></sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1">
+				<data key="d16">
+					<y:FreeNodePortLocationModelParameter Ratio="0.9917822290703646,0.5"/>
+				</data>
+			</port>
+		</node>
+		<node id="n1">
+			<data key="d0">22</data>
+			<data key="d5">
+				<y:RectD X="2610.59375" Y="-104.3125" Width="165.125" Height="134.375"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>tipo_operacion_contable</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_tipo_operacion. pk]]></sys:String>
+									<sys:String>descripcion.</sys:String>
+									<sys:String>debito.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+			<port name="p2"/>
+		</node>
+		<node id="n2">
+			<data key="d0">23</data>
+			<data key="d5">
+				<y:RectD X="739.96875" Y="389.25" Width="110.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>TipoInmueble</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_tipo. pk]]></sys:String>
+									<sys:String>descripcion.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n3">
+			<data key="d0">24</data>
+			<data key="d5">
+				<y:RectD X="805.21875" Y="-744.375" Width="124" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Localizaciones</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_localizacion. pk]]></sys:String>
+									<sys:String><![CDATA[provincia. ]]></sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n4">
+			<data key="d0">25</data>
+			<data key="d5">
+				<y:RectD X="961.359375" Y="-744.375" Width="110.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Localidades</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_localidad. pk]]></sys:String>
+									<sys:String><![CDATA[id_provincia. fk]]></sys:String>
+									<sys:String>codigoPostal.</sys:String>
+									<sys:String>nombre.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+			<port name="p2"/>
+		</node>
+		<node id="n5">
+			<data key="d0">26</data>
+			<data key="d5">
+				<y:RectD X="1103.625" Y="-750.875" Width="113.625" Height="174"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Direcciones</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_direccion. pk]]></sys:String>
+									<sys:String><![CDATA[id_localidad. fk]]></sys:String>
+									<sys:String>calle.</sys:String>
+									<sys:String>numero.</sys:String>
+									<sys:String>departamento.</sys:String>
+									<sys:String>piso.</sys:String>
+									<sys:String>observaciones.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+			<port name="p2"/>
+		</node>
+		<node id="n6">
+			<data key="d0">27</data>
+			<data key="d5">
+				<y:RectD X="553.75" Y="118.5" Width="113.625" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>Anuncios</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_anuncio. pk]]></sys:String>
+									<sys:String>titulo.</sys:String>
+									<sys:String><![CDATA[ texto.]]></sys:String>
+									<sys:String><![CDATA[ fecha.]]></sys:String>
+									<sys:String><![CDATA[ vigencia.]]></sys:String>
+									<sys:String>tipo_vigencia.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n7">
+			<data key="d0">28</data>
+			<data key="d5">
+				<y:RectD X="1304.875" Y="563" Width="124" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>divisas</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_divisa. pk]]></sys:String>
+									<sys:String>acronimo.</sys:String>
+									<sys:String>descripcion.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n8">
+			<data key="d0">29</data>
+			<data key="d5">
+				<y:RectD X="1304.875" Y="349.5" Width="124" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>precios</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_Precio. pk]]></sys:String>
+									<sys:String><![CDATA[id_divisa. fk]]></sys:String>
+									<sys:String>monto.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n9">
+			<data key="d0">31</data>
+			<data key="d5">
+				<y:RectD X="1034.296875" Y="600.625" Width="110.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>operaciones</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_operacion. pk]]></sys:String>
+									<sys:String>descripcion.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n10">
+			<data key="d0">33</data>
+			<data key="d5">
+				<y:RectD X="568.25" Y="319" Width="110.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>inmuebles_estados</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_estado. pk]]></sys:String>
+									<sys:String>descripcion.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n11">
+			<data key="d0">35</data>
+			<data key="d5">
+				<y:RectD X="1725.546875" Y="-655.125" Width="110.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>personas</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_persona. pk]]></sys:String>
+									<sys:String>dni.</sys:String>
+									<sys:String>fechaNacimiento.</sys:String>
+									<sys:String>fechaInscripcion.</sys:String>
+									<sys:String>nombreCompleto.</sys:String>
+									<sys:String><![CDATA[id_direccion. fk]]></sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+			<port name="p2"/>
+		</node>
+		<node id="n12">
+			<data key="d0">36</data>
+			<data key="d5">
+				<y:RectD X="1812.90625" Y="-467.25" Width="110.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>clientes</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_cliente. pk]]></sys:String>
+									<sys:String><![CDATA[id_persona. pk fk]]></sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n13">
+			<data key="d0">37</data>
+			<data key="d5">
+				<y:RectD X="1638.1875" Y="-467.25" Width="110.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>dueños</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_dueño. pk]]></sys:String>
+									<sys:String><![CDATA[id_persona. pk fk]]></sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+			<port name="p2"/>
+		</node>
+		<node id="n14">
+			<data key="d0">38</data>
+			<data key="d5">
+				<y:RectD X="949.328125" Y="-483.28125" Width="134.1875" Height="193.0625"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>historial_direcciones</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_historial. pk]]></sys:String>
+									<sys:String><![CDATA[id_dueño. fk]]></sys:String>
+									<sys:String>id_direccion.</sys:String>
+									<sys:String><![CDATA[id_localidad. fk]]></sys:String>
+									<sys:String>calle.</sys:String>
+									<sys:String>numero.</sys:String>
+									<sys:String>departamento.</sys:String>
+									<sys:String>observaciones.</sys:String>
+									<sys:String>fechaInicioVigencia.</sys:String>
+									<sys:String>fechaFinVigencia.</sys:String>
+									<sys:String></sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n15">
+			<data key="d0">39</data>
+			<data key="d5">
+				<y:RectD X="1087.15625" Y="-133.65625" Width="146.5625" Height="193.0625"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>inmueble</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_inmueble. pk]]></sys:String>
+									<sys:String><![CDATA[id_tipoInmueble. fk]]></sys:String>
+									<sys:String><![CDATA[id_estado_inmueble. fk]]></sys:String>
+									<sys:String><![CDATA[id_direccion fk]]></sys:String>
+									<sys:String><![CDATA[id_anuncio. fk]]></sys:String>
+									<sys:String><![CDATA[id_precio. fk]]></sys:String>
+									<sys:String><![CDATA[id_dueño. fk]]></sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+			<port name="p2"/>
+			<port name="p3"/>
+			<port name="p4"/>
+			<port name="p5"/>
+			<port name="p6"/>
+			<port name="p7"/>
+			<port name="p8"/>
+		</node>
+		<node id="n16">
+			<data key="d0">40</data>
+			<data key="d5">
+				<y:RectD X="1016.078125" Y="379.75" Width="146.5625" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>inmuebles_operaciones</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_inmueble. pk fk]]></sys:String>
+									<sys:String><![CDATA[id_operacion. pk fk]]></sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n17">
+			<data key="d0">41</data>
+			<data key="d5">
+				<y:RectD X="658.625" Y="-117.625" Width="129.1875" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>periodoOcupacion</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_periodo. pk]]></sys:String>
+									<sys:String><![CDATA[id_inmueble. fk]]></sys:String>
+									<sys:String>fechaInicio.</sys:String>
+									<sys:String>fechaBaja.</sys:String>
+									<sys:String>motivoBaja.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n18">
+			<data key="d0">42</data>
+			<data key="d5">
+				<y:RectD X="1578.65625" Y="208.875" Width="126.5625" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>contrato_finalidades</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_finalidad. pk]]></sys:String>
+									<sys:String>descripcion.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n19">
+			<data key="d0">43</data>
+			<data key="d5">
+				<y:RectD X="1761.03125" Y="216.5" Width="126.5625" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>contratos_estados</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_estado. pk]]></sys:String>
+									<sys:String>descripcion.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n20">
+			<data key="d0">44</data>
+			<data key="d5">
+				<y:RectD X="1761.03125" Y="-148.3125" Width="213.875" Height="222.375"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>ContratoAlquiler</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_inmueble. pk fk]]></sys:String>
+									<sys:String><![CDATA[id_cliente. pk fk]]></sys:String>
+									<sys:String>fechaContrato.</sys:String>
+									<sys:String><![CDATA[id_estado. fk]]></sys:String>
+									<sys:String>periodo_vigencia.</sys:String>
+									<sys:String>vencimiento_cuota.</sys:String>
+									<sys:String><![CDATA[id_finalidad. fk]]></sys:String>
+									<sys:String>precio_inicial.</sys:String>
+									<sys:String>periodicidad_aumento.</sys:String>
+									<sys:String>porcentaje_aumento_periodicidad.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+			<port name="p2"/>
+			<port name="p3"/>
+			<port name="p4"/>
+			<port name="p5"/>
+			<port name="p6"/>
+			<port name="p7"/>
+			<port name="p8"/>
+		</node>
+		<node id="n21">
+			<data key="d0">46</data>
+			<data key="d5">
+				<y:RectD X="1920.796875" Y="421.75" Width="126.5625" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>tipoGarantia</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_garantia. pk]]></sys:String>
+									<sys:String>descripcion.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n22">
+			<data key="d0">47</data>
+			<data key="d5">
+				<y:RectD X="1929.015625" Y="223.375" Width="110.125" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>garante</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[dni. pk]]></sys:String>
+									<sys:String><![CDATA[id_inmueble. pk fk]]></sys:String>
+									<sys:String><![CDATA[id_cliente. pk fk]]></sys:String>
+									<sys:String>nombre.</sys:String>
+									<sys:String>fechaNacimiento.</sys:String>
+									<sys:String><![CDATA[id_tipoGarantia. fk]]></sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n23">
+			<data key="d0">48</data>
+			<data key="d5">
+				<y:RectD X="2077.703125" Y="223.375" Width="137.25" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>precioAlquiler</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_precioAlquiler. pk]]></sys:String>
+									<sys:String><![CDATA[id_inmueble. pk fk]]></sys:String>
+									<sys:String><![CDATA[id_cliente. pk fk]]></sys:String>
+									<sys:String>importe.</sys:String>
+									<sys:String>fechaDefinicion.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+		</node>
+		<node id="n24">
+			<data key="d0">49</data>
+			<data key="d5">
+				<y:RectD X="2317.75" Y="-117.625" Width="147.375" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>pagos</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_inmueble. pk fk]]></sys:String>
+									<sys:String><![CDATA[id_cliente. pk fk]]></sys:String>
+									<sys:String><![CDATA[mesaño. pk]]></sys:String>
+									<sys:String><![CDATA[id_tipo_operacion. fk]]></sys:String>
+									<sys:String>importePago.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n25">
+			<data key="d0">50</data>
+			<data key="d5">
+				<y:RectD X="2317.75" Y="58.625" Width="147.375" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>cuotas</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_inmueble. pk fk]]></sys:String>
+									<sys:String><![CDATA[id_cliente. pk fk]]></sys:String>
+									<sys:String><![CDATA[mesaño. pk]]></sys:String>
+									<sys:String><![CDATA[id_tipo_operacion. fk]]></sys:String>
+									<sys:String>importe.</sys:String>
+									<sys:String>fechaVencimiento.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n26">
+			<data key="d0">51</data>
+			<data key="d5">
+				<y:RectD X="2317.75" Y="-293.875" Width="147.375" Height="161"/>
+			</data>
+			<data key="d7">
+				<x0:EntityNodeStyle fill="{y:GraphMLReference 1}" insetFill="{y:GraphMLReference 2}" stroke="BLACK">
+					<x0:EntityNodeStyle.model>
+						<x0:EntityRelationshipModel>
+							<x0:EntityRelationshipModel.title>recargos</x0:EntityRelationshipModel.title>
+							<x0:EntityRelationshipModel.attributes>
+								<x:Array Type="sys:Object">
+									<sys:String><![CDATA[id_inmueble. pk fk]]></sys:String>
+									<sys:String><![CDATA[id_cliente. pk fk]]></sys:String>
+									<sys:String><![CDATA[mesaño. pk]]></sys:String>
+									<sys:String><![CDATA[id_tipo_operacion. fk]]></sys:String>
+									<sys:String>importeRecargo.</sys:String>
+									<sys:String>diasVencidos.</sys:String>
+									<sys:String>ultimo_usuario.</sys:String>
+									<sys:String>ultimo_horario.</sys:String>
+								</x:Array>
+							</x0:EntityRelationshipModel.attributes>
+						</x0:EntityRelationshipModel>
+					</x0:EntityNodeStyle.model>
+				</x0:EntityNodeStyle>
+			</data>
+			<port name="p0"/>
+			<port name="p1"/>
+		</node>
+		<node id="n27">
+			<data key="d0">52</data>
+			<data key="d5">
+				<y:RectD X="-1841.5" Y="-496.5" Width="30" Height="1551"/>
+			</data>
+			<data key="d7">
+				<yjs:ShapeNodeStyle stroke="#FF91A06B" fill="#FF91A06B"/>
+			</data>
+		</node>
+		<edge id="e0" source="n12" target="n11" sourceport="p0" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e1" source="n13" target="n11" sourceport="p0" targetport="p1">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e2" source="n5" target="n4" sourceport="p0" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e3" source="n4" target="n3" sourceport="p1" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e4" source="n8" target="n7" sourceport="p0" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e5" source="n11" target="n5" sourceport="p2" targetport="p1">
+			<data key="d12">
+				<x:List>
+					<y:Bend Location="1780.609375,-663.875"/>
+				</x:List>
+			</data>
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e6" source="n15" target="n5" sourceport="p0" targetport="p2">
+			<data key="d12">
+				<x:List>
+					<y:Bend Location="1160.4375,-491.75"/>
+				</x:List>
+			</data>
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e7" source="n17" target="n15" sourceport="p0" targetport="p1">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e8" source="n20" target="n15" sourceport="p0" targetport="p2">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e9" source="n20" target="n12" sourceport="p1" targetport="p1">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e10" source="n25" target="n20" sourceport="p0" targetport="p2">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e11" source="n24" target="n20" sourceport="p0" targetport="p3">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e12" source="n26" target="n20" sourceport="p0" targetport="p4">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="4"/>
+			</data>
+		</edge>
+		<edge id="e13" source="n26" target="n1" sourceport="p1" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e14" source="n24" target="n1" sourceport="p1" targetport="p1">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e15" source="n25" target="n1" sourceport="p1" targetport="p2">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e16" source="n15" target="n13" sourceport="p3" targetport="p1">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e17" source="n14" target="n4" sourceport="p0" targetport="p2">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e18" source="n14" target="n13" sourceport="p1" targetport="p2">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e19" source="n15" target="n6" sourceport="p4" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e20" source="n15" target="n8" sourceport="p5" targetport="p1">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e21" source="n15" target="n10" sourceport="p6" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e22" source="n15" target="n2" sourceport="p7" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e23" source="n16" target="n15" sourceport="p0" targetport="p8">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e24" source="n16" target="n9" sourceport="p1" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e25" source="n20" target="n18" sourceport="p5" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e26" source="n20" target="n19" sourceport="p6" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e27" source="n22" target="n21" sourceport="p0" targetport="p0">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e28" source="n22" target="n20" sourceport="p1" targetport="p7">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e29" source="n23" target="n20" sourceport="p0" targetport="p8">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+		<edge id="e30" source="n0" target="n0" sourceport="p0" targetport="p1">
+			<data key="d13">
+				<y:GraphMLReference ResourceKey="6"/>
+			</data>
+		</edge>
+	</graph>
+</graphml>

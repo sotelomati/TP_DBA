@@ -4,7 +4,7 @@ $$
 BEGIN
 	
 	IF NOT EXISTS (Select * from contratoAlquiler 
-				  where id_inmueble= NEW.idinmueble AND id_estado = 1)
+				  where id_inmueble= NEW.id_inmueble AND id_estado = 1)
 	THEN
 		RETURN NEW;
 	END IF;

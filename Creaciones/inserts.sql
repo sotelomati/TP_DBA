@@ -21,6 +21,10 @@ insert into Localidades(id_localidad, nombre, codigo_postal, id_provincia) value
 insert into Direcciones(id_direccion, id_localidad, calle, numero, departamento, piso, observaciones) values (1, 1, 'Division de los Andes', 1276, NULL ,NULL, 'Porton Negro');
 insert into Direcciones(id_direccion, id_localidad, calle, numero, departamento, piso, observaciones) values (2, 1, 'Victorio Camerano', 2052, NULL ,NULL, 'Porton Azul');
 insert into Direcciones(id_direccion, id_localidad, calle, numero, departamento, piso, observaciones) values (3, 7, 'Los Pinos', 111, 'B',3, 'No tiene porton');
+insert into Direcciones(id_direccion, id_localidad, calle, numero, departamento, piso, observaciones) values (4, 3, 'Las Napias', 111, 'B',3, 'No tiene porton');
+insert into Direcciones(id_direccion, id_localidad, calle, numero, departamento, piso, observaciones) values (5, 4, 'Los Naranjos', 111, 'B',3, 'No tiene porton');
+insert into Direcciones(id_direccion, id_localidad, calle, numero, departamento, piso, observaciones) values (6, 6, 'Las culetas', 111, 'B',3, 'No tiene porton');
+insert into Direcciones(id_direccion, id_localidad, calle, numero, departamento, piso, observaciones) values (7, 7, 'Los Pibitos', 111, 'B',3, 'No tiene porton');
 
 --Anuncios
 insert into Anuncios(id_anuncio, titulo, texto, fecha, vigencia, tipo_vigencia) values (1, 'Venta Casa', 'Vendo casa', '20-01-2021', 30,'D');
@@ -62,25 +66,34 @@ insert into inmuebles_estados(id_estado, descripcion) values (4, 'Vendido');
 insert into Personas(id_persona, dni, fechanacimiento, fechainscripcion, nombrecompleto, id_direccion) values (10, '41154249', '20-11-1998', '24-05-2021', 'Matias Nicolas Sotelo',1);
 insert into Personas(id_persona, dni, fechanacimiento, fechainscripcion, nombrecompleto, id_direccion) values (11, '39717392', '16-07-1996', '01-01-2021', 'Atilio Mariano Modenutti',2);
 insert into Personas(id_persona, dni, fechanacimiento, fechainscripcion, nombrecompleto, id_direccion) values (12, '42560204', '01-01-1995', '01-05-2021', 'Juan Ignacio Gerstner',3);
+insert into Personas(id_persona, dni, fechanacimiento, fechainscripcion, nombrecompleto, id_direccion) values (13, '42560204', '01-01-1995', '01-05-2021', 'Fernando Sato',4);
+insert into Personas(id_persona, dni, fechanacimiento, fechainscripcion, nombrecompleto, id_direccion) values (14, '42560204', '01-01-1995', '01-05-2021', 'Sebatian Trossero',5);
+insert into Personas(id_persona, dni, fechanacimiento, fechainscripcion, nombrecompleto, id_direccion) values (15, '42560204', '01-01-1995', '01-05-2021', 'Flavia Crolla',6);
+insert into Personas(id_persona, dni, fechanacimiento, fechainscripcion, nombrecompleto, id_direccion) values (16, '42560204', '01-01-1995', '01-05-2021', 'Ulises Bueno',7);
+
 
 --Ingreso clientes
 insert into Clientes(id_cliente, id_persona) values (1, 10);
 insert into Clientes(id_cliente, id_persona) values (2, 11);
-insert into Clientes(id_cliente, id_persona) values (3, 12);
+insert into Clientes(id_cliente, id_persona) values (4, 13);
+insert into Clientes(id_cliente, id_persona) values (5, 14);
+
+
 
 --Ingreso de dueños
 insert into Dueños(id_dueño, id_persona) values (2, 11);
+insert into Dueños(id_dueño, id_persona) values (6, 15);
+insert into Dueños(id_dueño, id_persona) values (7, 16);
 
 --Inmmuebles
-insert into Inmuebles(id_inmueble, id_tipoInmueble, id_estado_inmueble, 
-					  id_direccion, id_anuncio, id_precio, id_dueño) 
+insert into Inmuebles(id_inmueble, id_tipoInmueble, id_estado_inmueble, id_direccion, id_anuncio, id_precio, id_dueño) 
 					  values (1, 101, 1, 3, 1, 1, 2);
 insert into Inmuebles(id_inmueble, id_tipoInmueble, id_estado_inmueble, 
 					  id_direccion, id_anuncio, id_precio, id_dueño) 
-					  values (1002, 102, 2, 1, 2, 2, 2);
+					  values (1002, 102, 2, 1, 2, 2, 6);
 insert into Inmuebles(id_inmueble, id_tipoInmueble, id_estado_inmueble, 
 					  id_direccion, id_anuncio, id_precio, id_dueño) 
-					  values (1003, 103, 1, 3, 3, 3, 2);
+					  values (1003, 103, 1, 3, 3, 3, 7);
 					  
 --inmuebles operaciones
 INSERT INTO inmuebles_operaciones(id_inmueble, id_operacion)
@@ -103,9 +116,12 @@ insert into contratos_estados(id_estado, descripcion) values (4, 'Baja a pedido 
 
 --Contratos
 insert into ContratoAlquiler(id_inmueble, id_cliente, fechacontrato, id_estado, periodo_vigencia, vencimiento_cuota, id_finalidad, precio_inicial) 
-							 values (1000, 1, '20-05-2021', 1, 6, 10, 2, 1500);						 
+							 values (1000, 1, '01-01-2021', 1, 6, 10, 2, 1500);						 
 insert into ContratoAlquiler(id_inmueble, id_cliente, fechacontrato, id_estado, periodo_vigencia, vencimiento_cuota, id_finalidad, precio_inicial) 
-							 values (1002, 3, '26-05-2021', 1, 6, 10, 2, 1500);							 
+							 values (1002, 4, '20-07-2020', 1, 12, 10, 2, 2600);	
+insert into ContratoAlquiler(id_inmueble, id_cliente, fechacontrato, id_estado, periodo_vigencia, vencimiento_cuota, id_finalidad, precio_inicial) 
+							 values (1003, 5, '10-05-2021', 1, 6, 10, 2, 4000);	
+	
 
 --Tipos de Garantias
 insert into TipoGarantia(id_garantia, descripcion) values (1, 'Recibo de Sueldo');
